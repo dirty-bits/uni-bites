@@ -1,6 +1,6 @@
 var mongoose = require("mongoose");
 var connection = null;
-var mongodbConnectionString = 'mongodb://localhost/uni-bitesDB';
+var mongodbConnectionString = "mongodb://#MongoDbUser#:#MongoDbPassword#@#MongoDbServer#:#MongoDbPort#/#MongoDbSchema#";
 
 console.log(mongoose.connection.db);
 
@@ -9,7 +9,7 @@ if (!mongoose.connection.db) {
         if(err) {
             console.error("Error connecting to mongoDB: %d", JSON.stringify(err));
         }
-        console.log("connected to database: localhost");
+        console.log("connected to database...... ");
     });
 }
 

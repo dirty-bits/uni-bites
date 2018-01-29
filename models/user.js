@@ -27,4 +27,4 @@ usersSchema.methods.validPassword = function(password) {
     return bcrypt.compareSync(password, this.password_hash);
 }
 
-module.exports = mongoose.model('firstapp-users', usersSchema);
+module.exports = mongoose.model('unibites-users', usersSchema);

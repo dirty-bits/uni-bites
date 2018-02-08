@@ -1,6 +1,6 @@
 var mongoose = require("mongoose");
 var connection = null;
-var mongodbConnectionString = "mongodb://mongodb3197fa:ny3pip@danu7.it.nuigalway.ie:8717/mongodb3197";
+var mongodbConnectionString = 'mongodb://mongodb3477rj:hy6rib@danu7:8717/mongodb3477';
 
 console.log(mongoose.connection.db);
 

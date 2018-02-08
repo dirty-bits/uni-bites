@@ -5,7 +5,9 @@ body {
 
 .loginArea {
     background-image: url("../images/Food/fish.jpg");
+    background-size: cover;
     height: 100vh;
+    margin-top: 4%;
 }
 
 .loginBox {
@@ -16,6 +18,8 @@ body {
 }
 
 .formHeadBox {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
     background-color: orange;
     padding: 20px;
 }

@@ -7,7 +7,8 @@ console.log(mongoose.connection.db);
 if (!mongoose.connection.db) {
     connection = mongoose.connect(mongodbConnectionString, function(err) {
         if(err) {
-            console.error("Error connecting to mongoDB: %d", JSON.stringify(err));
+            console.error("Error connecting to mongoDB: %d", JSON.stringify(err)); 
+            return;
         }
         console.log("connected to database...... ");
     });

@@ -1,6 +1,5 @@
-body {
-    height: 100vh;
-    width: 100vw;
+.logRegister {
+    overflow: hidden;
 }
 
 .loginArea {
@@ -8,9 +7,11 @@ body {
     background-size: cover;
     height: 100vh;
     margin-top: 4%;
+    overflow: hidden;
 }
 
 .loginBox {
+    margin-top: 8%;
     border-radius: 5px;
     padding: 0px;
     background-color: white;
@@ -20,8 +21,9 @@ body {
 .formHeadBox {
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-    background-color: orange;
+    background-color: #F2994A;
     padding: 20px;
+    margin-bottom: 20px;
 }
 
 .headerTitle {
@@ -30,8 +32,22 @@ body {
     color: white;
 }
 
+.inputField {
+    width: 100%;
+    border-radius: 3px;
+    border: 2px solid #4AA3F2;
+}
+
 .signInButton {
-    background-color: #2D9CDB;
+    border-radius: 5px;
+    font-family: "Roboto", sans-serif;
+    font-size: 24px;
+    background-color: #F2994A;
+    color: white;
+}
+
+.signInButton:hover {
+    background-color: #EF7E1A;
     color: white;
 }
 

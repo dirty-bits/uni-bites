@@ -4,19 +4,26 @@ body {
 }
 
 .loginArea {
-    background-image: url("../images/bigsalad.jpg");
+    background-image: url("../images/Food/fish.jpg");
     height: 100vh;
 }
 
-.formBox {
+.loginBox {
+    border-radius: 5px;
     padding: 0px;
     background-color: white;
+    font-family: "Roboto", sans-serif;
 }
 
 .formHeadBox {
-    font-family: 34px;
     background-color: orange;
     padding: 20px;
+}
+
+.headerTitle {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    color: white;
 }
 
 .signInButton {
@@ -27,4 +34,6 @@ body {
 .leftInputHeader {
     display: block;
     text-align: left !important;
+    font-family: "Roboto", sans-serif;
+    font-size: 24px;
 }

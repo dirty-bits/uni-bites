@@ -1,11 +1,9 @@
 body {
     height: 100vh;
     width: 100vw;
-    overflow-x: hidden;
-    overflow-y: hidden;
 }
 
-.row {
+.loginArea {
     background-image: url("../images/bigsalad.jpg");
     height: 100vh;
 }
@@ -24,4 +22,9 @@ body {
 .signInButton {
     background-color: #2D9CDB;
     color: white;
+}
+
+.leftInputHeader {
+    display: block;
+    text-align: left !important;
 }

@@ -1,13 +1,8 @@
-.logRegister {
-    overflow: hidden;
-}
-
 .loginArea {
     background-image: url("../images/Food/fish.jpg");
     background-size: cover;
     height: 100vh;
     margin-top: 4%;
-    overflow: hidden;
 }
 
 .loginBox {

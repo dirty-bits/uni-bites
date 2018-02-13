@@ -1,8 +1,16 @@
+.pageWrapper {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
 .loginArea {
     background-image: url("../images/Food/fish.jpg");
     background-size: cover;
-    height: 100vh;
-    margin-top: 4%;
+    height: 95vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 .loginBox {

@@ -1,0 +1,27 @@
+body {
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.row {
+    background-image: url("../images/bigsalad.jpg");
+    height: 100vh;
+}
+
+.formBox {
+    padding: 0px;
+    background-color: white;
+}
+
+.formHeadBox {
+    font-family: 34px;
+    background-color: orange;
+    padding: 20px;
+}
+
+.signInButton {
+    background-color: #2D9CDB;
+    color: white;
+}

@@ -18,13 +18,16 @@
 
     <!-- Fonts from Google Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,900' rel='stylesheet' type='text/css'>
-    
+
+    <link href="stylesheets/login.css" rel="stylesheet">
+    <link href="stylesheets/font.css" rel="stylesheet">
+
     <!-- Fonts Awesome -->
     <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
-    
+
     <!-- Sweet Alert -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.11.4/sweetalert2.all.min.js"></script>
-    <!-- 
+    <!--
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -51,7 +54,7 @@
                     <li><a href="/feed">Feeds</a></li>
                     <li><a href="/users/logout">Logout</a></li>
                     {{/if}}
-                    
+
                     {{#if hbsHelpers.unAuthorised}}
                     <li><a href="/">Already a member?</a></li>
                     <li><a href="/login">Login</a></li>

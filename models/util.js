@@ -1,5 +1,6 @@
 var mongoose = require("mongoose");
 var connection = null;
+
 var mongodbConnectionString = "mongodb://#MongoDbUser#:#MongoDbPassword#@#MongoDbServer#:#MongoDbPort#/#MongoDbSchema#";
 
 console.log(mongoose.connection.db);
@@ -12,7 +13,7 @@ if (!mongoose.connection.db) {
         } else {
             console.log("connected to database...... ");
         }
-
+        console.log("connected to database: danu7.it.nuigalway.ie");
     });
 }
 

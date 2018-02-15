@@ -343,7 +343,9 @@ img {
   height: auto;
 
 }
-
+.img-logo{
+    display:inline
+}
 
 .img-responsive {
   display: block;
@@ -4493,7 +4495,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 
 .navbar-brand {
   float: left;
-  padding: 15px 15px;
+  padding: 0px 0px;
   font-size: 18px;
   line-height: 20px;
 }
@@ -4587,6 +4589,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
   .navbar-nav > li > a {
     padding-top: 15px;
     padding-bottom: 15px;
+      
      
   }
   .navbar-nav.navbar-right:last-child {

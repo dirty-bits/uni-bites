@@ -11,6 +11,7 @@ var login = require('./routes/login');
 var feed = require('./routes/feed');
 var register = require('./routes/register');
 var commentsAPI = require('./routes/comments');
+var cafe = require('./routes/cafe');
 
 var app = express();
 // view engine setup
@@ -31,6 +32,7 @@ app.use('/users', users);
 app.use('/login', login);
 app.use('/feed', feed);
 app.use('/', register);
+app.use('/cafe', cafe);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -1,7 +1,26 @@
-.front {
-    padding-left: 15px;
+.logoBox {
+    padding: 15px;
 }
-.position {
-    padding: 10px 0px;
-    
+
+.navigation {
+    padding: 15px;
+    background-color: #994AF2;
+}
+
+.navLinks li a {
+    font-family: "Roboto", sans-serif;
+}
+
+.navLinks:last-child {
+    margin-right: 15px !important;
+}
+
+.specialButton {
+    border: 3px solid #F2944A;
+    border-radius: 5px;
+    font-weight: 700;
+}
+
+.specialButton:hover {
+    background-color: #F2944A;
 }

@@ -1,3 +1,11 @@
+.registerArea {
+    background-image: url("../images/Food/fish.jpg");
+    background-size: cover;
+    height: 95vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
 .registerBox {
     margin-top: 4%;
     border-radius: 5px;
@@ -6,8 +14,8 @@
     font-family: "Roboto", sans-serif;
 }
 
-form > :nth-child(5) {
-    margin-bottom: -20px;
+form > :nth-child(4) {
+    margin-bottom: 10px;
 }
 
 .toLogin {

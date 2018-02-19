@@ -1,59 +1,43 @@
-<div class="container">
-  <div class="row mt centered">
-  <div class="col-md-8 col-md-offset-2">
-      <form  id="log-form" name="log-form" class="form-signin form-horizontal" role="form" method="POST">
-<!-- 
-    name="log-form" class=" form-horizontal" class="form"      
--->
+<div class="pageWrapper">
+  <div class="row mt centered loginArea">
+    <div class="col-md-9 col-md-offset-3">
 
-<!-- 
-        <h2 class="form-signin-heading">Please Sign In</h2>
+        <!--FormBox-->
+        <div class="col-sm-8 loginBox">
+            <div class="form-header formHeadBox">
+                <h2 class="form-signin-heading headerTitle">Please Sign In</h2>
+            </div>
 
-        <input type="text" id="username" name="username" class="form-control" placeholder="Username" reqiured autofocus>
-        <input type="password" id="password" name="password" class="form-control" placeholder="Password" required>
+            <form  id="log-form" name="log-form" class="form-signin form-horizontal" role="form" method="POST">
 
-        <div class="checkbox">
-          <label>
-            <input type="checkbox" value="remember-me"/>Remember me
-          </label>
+                <!-- Username/Email -->
+                <div class="form-group">
+                    <div class="col-sm-10 col-sm-offset-2">
+                        <div class="col-sm-10">
+                            <label for="inputUsername" class="control-label leftInputHeader">Username</label>
+                            <input type="text" class="form-control input-lg required inputField" id="userName" name="userName" placeholder="Username">
+                        </div>
+                    </div>
+                </div>
+
+                <!--Password-->
+                <div class="form-group">
+                    <div class="col-sm-10 col-sm-offset-2">
+                        <div class="col-sm-10">
+                            <label for="inputPassword" class="control-label leftInputHeader">Password</label>
+                            <input type="password" class="form-control input-lg required inputField" id="inputPassword" name="inputPassword" placeholder="Password">
+                        </div>
+                    </div>
+                </div>
+
+                <!--Button-->
+                <div class="form-group">
+                    <div class="col-sm-10 mt col-sm-offset-1">
+                        <button type="submit" class="btn btn-lg btn-block signInButton">Sign in</button>
+                    </div>
+                </div>
+            </form>
+            <a href="/register" class="toRegister">Need an account? Register here.</a>
         </div>
-
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
--->
-
-
-        <!-- ---------------------------------------------------------------- -->
-
-        <h2 class="form-signin-heading">Please Sign In</h2>
-
-        <div class="form-group mt">
-            <div class="col-sm-10 col-sm-offset-2">
-            <div class="col-sm-3">
-                <label for="inputUsername" class="control-label">Username</label>
-            </div>
-            <div class="col-sm-9">
-                <input type="text" class="form-control input-lg required" id="inputUsername" name="inputUsername" placeholder="@username">
-            </div>
-            </div>
-        </div>
-        <div class="form-group">
-            <div class="col-sm-10 col-sm-offset-2">
-            <div class="col-sm-3">
-                <label for="inputPassword" class="control-label">Password</label>
-            </div>
-            <div class="col-sm-9">
-                <input type="password" class="form-control input-lg required" id="inputPassword" name="inputPassword" placeholder="@password">
-            </div>
-        </div>
-        <div class="form-group">
-            <div class="row col-sm-offset-2 col-sm-10 mt">
-                <button type="submit" class="btn btn-warning btn-lg">Login</button>
-            </div>
-        </div>
-
-        <!-- ----------------------------------------------------------------- -->
-
-      </form>
     </div>
-  </div>
 </div>

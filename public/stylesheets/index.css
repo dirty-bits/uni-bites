@@ -1,0 +1,22 @@
+.backgroundimg{
+    background-image: url("../images/meal2.jpg");
+    background-size: cover;
+    height: 95vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.search_bar {
+    margin-top: 45%;
+    border-radius: 5px;
+    padding: 0px 0px 10px 0px;
+    border: 1px solid blue;
+    padding: 14px 20px;
+    height: 43px;
+    display: inline-block;
+}
+.search_button {
+  
+ }
+.padding {
+    
+}

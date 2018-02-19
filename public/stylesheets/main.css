@@ -53,7 +53,7 @@ p {
 
 /* Links */
 a {
-    color: #ADDBAD;
+    color: #F2994A;
     word-wrap: break-word;
 
     -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
@@ -118,14 +118,14 @@ a:after {
 
 i {
 	margin: 8px;
-	color: #ADDBAD; 
+	color: #F2994A; 
 }
 
 
 /* HeaderWrap */
 #headerwrap {
 	/* background: url(images/bg01.jpg) no-repeat center top; */
-	background-color: #ADDBAD;
+	background-color: #F2994A;
 	margin-top: -20px;
 	/*padding-top:20px;*/
 	background-attachment: relative;

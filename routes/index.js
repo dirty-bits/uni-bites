@@ -8,6 +8,7 @@ router.get('/', function(req, res, next) {
 });
 
 
+
 /* GET login page. */
 router.get('/login', function(req, res, next) {
   res.render('login', { title: 'uni-bites' });
@@ -49,6 +50,7 @@ router.get('/getComments', function(req, res, next) {
         res.json(comments);
     })
 });
+
 
 
 module.exports = router;

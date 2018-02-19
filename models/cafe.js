@@ -9,4 +9,4 @@ var cafeSchema = new mongoose.Schema({
   location: String
 });
 
-module.exports = mongoose.model('unibites-users', cafeSchema);
+module.exports = mongoose.model('cafe', cafeSchema);

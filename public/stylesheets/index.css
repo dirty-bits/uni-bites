@@ -9,14 +9,18 @@
     margin-top: 45%;
     border-radius: 5px;
     padding: 0px 0px 10px 0px;
-    border: 1px solid blue;
+    border: 1px solid #2D9CDB;
     padding: 14px 20px;
     height: 43px;
     display: inline-block;
 }
 .search_button {
-  
+    margin-top: 242%;
+    border-radius: 5px;
+    padding: 0px 0px 10px 0px;
+    border: 1px solid #2D9CDB;
+    padding: 10px 20px;
+    height: 43px;
+    display: inline-block;
+    background-color: #F2994A;
  }
-.padding {
-    
-}

@@ -6,7 +6,7 @@
     overflow-y: hidden;
 }
 .search_bar {
-    margin-top: 45%;
+    margin-top: 300px;
     border-radius: 5px;
     padding: 0px 0px 10px 0px;
     border: 1px solid #2D9CDB;
@@ -15,7 +15,7 @@
     display: inline-block;
 }
 .search_button {
-    margin-top: 242%;
+    margin-top: 300px;
     border-radius: 5px;
     padding: 0px 0px 10px 0px;
     border: 1px solid #2D9CDB;
@@ -24,3 +24,12 @@
     display: inline-block;
     background-color: #F2994A;
  }
+.style_label {
+    color: #2D9CDB;
+    font-family: "Lato";
+    font-weight: bold;
+    font-size: 25px;
+    display: block;
+    padding-left: 10px;
+
+}

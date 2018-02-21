@@ -46,3 +46,38 @@ https://github.com/caolan/async
 http://mongoosejs.com/docs/populate.html
 
 https://github.com/elliotf/mocha-mongoose
+
+
+# Testing
+Use protractor for ui testing, not just for AngularJS.
+* http://www.protractortest.org/#/tutorial
+
+Use supertest for testing the api's, copy the postman tests and implement them in 
+code.
+
+## Testing Stack
+* Jasmine [Language, BDD type syntax]
+* Chai [Should style assertions]
+* Protractor [Test runner, possible to manage multiple browsers]
+
+https://github.com/angular/protractor/blob/master/docs/frameworks.md
+
+https://www.codementor.io/codementorteam/javascript-testing-framework-comparison-jasmine-vs-mocha-8s9k27za3
+https://medium.com/welldone-software/an-overview-of-javascript-testing-in-2018-f68950900bc3
+https://medium.com/@boriscoder/the-hidden-power-of-jest-matchers-f3d86d8101b0
+
+# settings.json
+Extract all settings out to a json file and add this to the
+git.ignores file
+
+# move app.js out into seperate servers, testing-server.js, production-server.js, develop-server.js each with seperate db's and seperate ports to enable easy quick unit testing locally while also possibly running seperate production and develop servers on the same box. 
+
+
+
+DOCS:
+https://jasmine.github.io/2.0/introduction.html
+http://www.protractortest.org/#/
+http://www.protractortest.org/#/locators#actions
+
+
+http://www.protractortest.org/#/typescript

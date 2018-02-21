@@ -10,7 +10,9 @@ $(document).ready( function() {
             dataType: 'json',
             data: {
                 'user_name': event.target.inputUsername.value,
-                'password': event.target.inputPassword.value
+                'email': event.target.inputEmail.value,
+                'password': event.target.inputPassword.value,
+                'confirm_password': event.target.inputConfirmPassword.value
             },
             success: function(token){
                 $(location).attr('href', '/feed' );

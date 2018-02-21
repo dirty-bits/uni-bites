@@ -17,7 +17,7 @@ describe('uni-bites login tests', function() {
   });
 
   it('should have the correct title', function() {
-    expect(browser.getTitle()).toEqual('unibites login');
+    expect(browser.getTitle()).toEqual('uni-bites - Login');
   });
 
   it('should fail if login details are left empty', function(){

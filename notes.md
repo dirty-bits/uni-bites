@@ -73,7 +73,6 @@ git.ignores file
 # move app.js out into seperate servers, testing-server.js, production-server.js, develop-server.js each with seperate db's and seperate ports to enable easy quick unit testing locally while also possibly running seperate production and develop servers on the same box. 
 
 
-
 DOCS:
 https://jasmine.github.io/2.0/introduction.html
 http://www.protractortest.org/#/
@@ -81,3 +80,40 @@ http://www.protractortest.org/#/locators#actions
 
 
 http://www.protractortest.org/#/typescript
+
+
+# Notes on running ui-tests
+If you have not used the testing system before you will need to run 
+
+'npm run test:once' 
+
+To install thenecessary drivers for chrome, firefox, android and ios depending on 
+your system.   
+
+You will need two command prompts in the base of the project directory to run the 
+tests. Once will run the servers and the other will give you feedback on the test 
+runs. In one command window run:
+
+'npm run test:servers'
+
+This will start two servers one is just the default 'npm start' to get the website 
+running the other is a handler for the browser based test runners. 
+
+You can test that these have succeded by checking the two urls that they start:
+
+[1] http://localhost:8604/
+[2] http://localhost:4444/wd/hub
+
+[1] is a testing version of the website, [2] is the management interface for the 
+browser based tests, it start new instances of a bowser when you call the
+'npm run test' script. When you run 'npm run test' it will only give you feedback 
+on the tests tha failed, i.e. the ones that need to be fixed.
+
+[notes]
+Ideally we should be parameterising the server urls and using a seperate database 
+that is created during the test start up. Thus there would be no problem with stale 
+data in the database and we could start from a known point each time the ui-test are 
+run.   
+
+[Common errors with ui tests]
+ * 

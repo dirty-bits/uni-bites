@@ -103,6 +103,27 @@ a:after {
     
 }
 
+/* Footer CSS*/
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 100px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.footerCopyright {
+    text-align: center;
+    vertical-align: middle;
+    line-height: 50px;
+    color: white;
+}
+
+.bgFooterCopyright {
+    background-color: #F2994A;
+    height: 50px;
+}
+
 /* Helpers */
 
 .mt {

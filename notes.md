@@ -1,4 +1,9 @@
 
+[!first] tidy up connection to mongoose and check its use inside the specs/integration tests, existing 
+system outputs way too much to the console when used from within the specs/integration tests.
+
+[next] inserting data into the database.
+
 # fix error 1:
 
 (node:13984) DeprecationWarning: `open()` is deprecated in mongoose >= 4.11.0, use `openUri()` instead, or set the

@@ -8,7 +8,6 @@ router.get('/register', function(req, res, next) {
 });
 
 router.post('/users/register', function(req, res, next) {
-
     var username = req.body.user_name;
     var password = req.body.password;
     // Check if account already exists

@@ -9,7 +9,7 @@
 
     "test": "protractor specs/conf.js",
 
-    "test:once": "webdriver-manager update --versions.chrome=2.16",
+    "test:once": "webdriver-manager update",
     "test:web-driver": "./node_modules/.bin/webdriver-manager start",
     "test:servers": "concurrently 'npm start' 'npm run test:web-driver'"
   },

@@ -42,7 +42,7 @@ $(document).ready( function() {
 
         $.ajax({
             type: 'POST',
-            url: '/users/register',
+            url: '/register',
             dataType: 'json',
             data: {
                 'user_name': event.target.inputUsername.value,

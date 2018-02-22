@@ -31,7 +31,7 @@ app.use('/', commentsAPI);
 app.use('/users', users);
 app.use('/login', login);
 app.use('/feed', feed);
-app.use('/', register);
+app.use('/register', register);
 app.use('/cafe', cafe);
 
 // catch 404 and forward to error handler

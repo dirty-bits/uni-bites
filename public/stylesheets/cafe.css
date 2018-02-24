@@ -1,0 +1,46 @@
+#heading{
+    font-family: "Roboto";
+    font-size: 75px;
+    color: #2d9cdb;
+}
+
+.menu-body {
+  max-width: 680px;
+  margin: 0 auto;
+  display: block;
+  color: rgb(92, 92, 92);
+}
+ 
+.menu-section {
+  margin-bottom: 80px;
+}
+ 
+.menu-section-title {
+  font-family: roboto;
+  font-size: 50px;
+  display: block;
+  font-weight:normal;
+  color: #994af2; 
+  margin: 20px 0; 
+  text-align: Center;
+}
+ 
+.menu-item {
+  margin: 35px 0;
+  font-size: 18px;
+}
+ 
+.menu-item-name{
+  font-family: lato;
+  font-weight: bold;
+    color: #f29948;
+  border-bottom: 2px dotted #2d9cdb;
+}
+ 
+.menu-item-price{
+  float: right;
+  font-weight: bold;
+  font-family: lato;
+  color: #f29948;
+  margin-top: -22px;
+}

@@ -1,13 +1,19 @@
+.bg{
+    background-image: url("../images/background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
 #heading{
     font-family: roboto;
     font-size: 75px;
-    color: #f2994a;
 }
 
 .menu-heading{
     font-family: roboto;
     font-size: 50;
-    color: #f2994a;
     padding-top: 35px;
 }
 
@@ -25,7 +31,6 @@
   font-size: 35px;
   display: block;
   font-weight:normal;
-  color: #994af2; 
   margin: 20px 0; 
   text-align: Center;
 }
@@ -38,7 +43,7 @@
 .menu-item-name{
   font-family: lato;
   font-weight: bold;
-  border-bottom: 2px dotted #2d9cdb;
+  border-bottom: 2px dotted;
 }
  
 .menu-item-price{

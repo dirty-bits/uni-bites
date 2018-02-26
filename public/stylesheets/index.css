@@ -33,3 +33,13 @@
     padding-left: 10px;
 
 }
+.wrap {
+    background-color: lightgrey;
+	margin-top: 20px;	
+    background-size: cover;
+	min-height: 50px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding: 0px 0px 50px 20px;
+	
+}

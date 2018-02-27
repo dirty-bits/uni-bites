@@ -4,7 +4,10 @@
 
 .navigation {
     padding: 15px;
-    background-color: #2D9CDB;
+    background-color: transparent;
+}
+.navigation.alt-color {
+    background-color: #b3d9ff;
 }
 
 .navLinks li a {
@@ -23,4 +26,8 @@
 
 .specialButton:hover {
     background-color: #F2944A;
+}
+
+ul.nav a:hover {
+     background-color: #F2944A !important;
 }

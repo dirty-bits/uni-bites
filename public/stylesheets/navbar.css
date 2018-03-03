@@ -5,3 +5,8 @@
     padding: 10px 0px;
     
 }
+.font {
+    text-shadow: -1px 0 black, 0 2px black, 1.5px 0 black, 0 -1 black;
+    font-family: sans-serif;
+    
+}

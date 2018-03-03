@@ -1,0 +1,45 @@
+.backgroundimg{
+    background-image: url("../images/meal2.jpg");
+    background-size: cover;
+    height: 95vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.search_bar {
+    margin-top: 300px;
+    border-radius: 5px;
+    padding: 0px 0px 10px 0px;
+    border: 1px solid #2D9CDB;
+    padding: 14px 20px;
+    height: 43px;
+    display: inline-block;
+}
+.search_button {
+    margin-top: 300px;
+    border-radius: 5px;
+    padding: 0px 0px 10px 0px;
+    border: 1px solid #2D9CDB;
+    padding: 10px 20px;
+    height: 43px;
+    display: inline-block;
+    background-color: #F2994A;
+ }
+.style_label {
+    color: #2D9CDB;
+    font-family: "Lato";
+    font-weight: bold;
+    font-size: 25px;
+    display: block;
+    padding-left: 10px;
+
+}
+.wrap {
+    background-color: lightgrey;
+	margin-top: 20px;	
+    background-size: cover;
+	min-height: 50px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding: 0px 0px 50px 20px;
+	
+}

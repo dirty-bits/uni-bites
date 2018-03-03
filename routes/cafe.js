@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var User = require('../models/cafe');
 
-/* GET login page. */
+/* GET cafe page. */
 router.get('/:cafename', function(req, res, next) {
 
     console.log(req.params.cafename);

@@ -12,27 +12,27 @@ router.get('/:cafename', function(req, res, next) {
     var cafe = "";
 
     var cafes = [
-        {name:"An Bialann", urlTag: "an-bialann"},
-        {name:"Smokeys", urlTag: "smokeys"},
-        {name:"Sult", urlTag: "sult"},
-        {name:"Friars", urlTag: "friars"},
-        {name:"Zinc", urlTag: "zinc"},
-        {name:"Cloud Cafe", urlTag: "cloud-cafe"},
-        {name:"The Wall", urlTag: "the-wall"},
-        {name:"Caife na Gaeilge", urlTag: "caife-na-gaeilge"}
+        {name: "An Bialann", urlTag: "an-bialann"},
+        {name: "Smokeys", urlTag: "smokeys"},
+        {name: "Sult", urlTag: "sult"},
+        {name: "Friars", urlTag: "friars"},
+        {name: "Zinc", urlTag: "zinc"},
+        {name: "Cloud Cafe", urlTag: "cloud-cafe"},
+        {name: "The Wall", urlTag: "the-wall"},
+        {name: "Caife na Gaeilge", urlTag: "caife-na-gaeilge"}
     ];
 
-    for(var c in cafes) {
-        if(c.urlTag == cafeTag) {
-            cafeTitle = c.name;
-            cafe = c;
+    for(var i = 0; i < cafes.length; i++) {
+        if(cafes[i].urlTag == cafeTag) {
+            cafeTitle = cafes[i].name;
+            cafe = cafes[i].name;
             break;
         }
     }
 
-    console.log(JSON.stringify(cafe));
+    console.log("Cafe Name: " + cafeTitle);
 
-	res.render('cafe', { title: cafeTitle, cafes: cafes, cafe: cafeTag});
+	res.render('cafe', { title: cafeTitle, cafes: cafes, cafe: cafe});
 });
 
 

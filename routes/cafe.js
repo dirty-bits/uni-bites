@@ -25,14 +25,13 @@ router.get('/:cafename', function(req, res, next) {
     for(var i = 0; i < cafes.length; i++) {
         if(cafes[i].urlTag == cafeTag) {
             cafeTitle = cafes[i].name;
-            cafe = cafes[i].name;
             break;
         }
     }
 
     console.log("Cafe Name: " + cafeTitle);
 
-	res.render('cafe', { title: cafeTitle, cafes: cafes, cafe: cafe});
+	res.render('cafe', { title: cafeTitle, cafes: cafes, cafe: cafeTitle});
 });
 
 

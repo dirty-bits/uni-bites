@@ -34,12 +34,20 @@
 
 }
 .wrap {
-    background-color: lightgrey;
-	margin-top: 20px;	
+    background-color: #E0DADA;
+	margin-top: 20px;
     background-size: cover;
 	min-height: 50px;
     overflow-x: hidden;
     overflow-y: hidden;
     padding: 0px 0px 50px 20px;
-	
+
+}
+
+.quickBox {
+    height: 150px;
+    background: linear-gradient(180deg, #F2994A 0%, #F72F14 100%), #C4C4C4;
+    text-align: center;
+    color: white;
+    line-height: 150px;
 }

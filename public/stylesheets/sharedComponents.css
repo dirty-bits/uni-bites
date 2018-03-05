@@ -74,8 +74,5 @@
 .bar {
     height: 7px;
     border: none;
-    display: block;
-    width: 70%;
-    margin: auto;
     background-color: #2D9CDB;
 }

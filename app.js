@@ -14,6 +14,7 @@ var commentsAPI = require('./routes/comments');
 var cafe = require('./routes/cafe');
 var privacyPolicy = require('./routes/privacy-policy');
 var aboutUs = require('./routes/about-us');
+var careers = require('./routes/careers');
 
 var app = express();
 // view engine setup
@@ -37,6 +38,7 @@ app.use('/', register);
 app.use('/cafe', cafe);
 app.use('/privacy-policy', privacyPolicy);
 app.use('/about-us', aboutUs);
+app.use('/careers', careers);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

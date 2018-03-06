@@ -3,7 +3,7 @@
 }
 
 .navigation {
-    padding: 15px;
+    padding: 30px;
     background-color: transparent;
     transition: background-color 1s ease-in-out;
     -webkit-transition: background-color 1s ease-in-out;
@@ -13,7 +13,7 @@
 }
 
 .navigation.alt-color {
-    background-color: #2D9CDB;
+    background-color: #F2944A;
 }
 
 .navLinks li a {
@@ -21,7 +21,7 @@
 }
 
 .navLinks:last-child {
-    margin-right: 15px !important;
+    margin-right: 50px !important;
 }
 
 .specialButton {
@@ -36,4 +36,8 @@
 
 ul.nav a:hover {
     background-color: #F2944A !important;
+}
+
+.brand {
+    padding: 0px 0px;
 }

@@ -35,7 +35,7 @@
     color: white;
 }
 
-form > :nth-child(3) {
+.loginArea form > :nth-child(3) {
     margin-bottom: -20px;
 }
 

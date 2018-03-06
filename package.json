@@ -10,7 +10,7 @@
     "test:once": "webdriver-manager update",
     "test:web-driver": "./node_modules/.bin/webdriver-manager start",
     "test:servers": "concurrently 'npm start' 'npm run test:web-driver'",
-    "lint": "eslint"
+    "lint": "eslint --fix-dry-run"
   },
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",

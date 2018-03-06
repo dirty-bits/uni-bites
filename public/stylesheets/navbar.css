@@ -3,11 +3,17 @@
 }
 
 .navigation {
-    padding: 30px;
+    padding: 15px;
     background-color: transparent;
+    transition: background-color 1s ease-in-out;
+    -webkit-transition: background-color 1s ease-in-out;
+    -moz-transition: background-color 1s ease-in-out;
+    -o-transition: background-color 1s ease-in-out;
+    -ms-transition: background-color 1s ease-in-out;
 }
+
 .navigation.alt-color {
-    background-color: #F2944A;
+    background-color: #2D9CDB;
 }
 
 .navLinks li a {
@@ -15,7 +21,7 @@
 }
 
 .navLinks:last-child {
-    margin-right: 50px !important;
+    margin-right: 15px !important;
 }
 
 .specialButton {
@@ -29,5 +35,5 @@
 }
 
 ul.nav a:hover {
-     background-color: #F2944A !important;
+    background-color: #F2944A !important;
 }

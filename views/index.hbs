@@ -1,4 +1,4 @@
-<div id="headerwrap">
+<div id="headerwrap  main-color">
     <div class="container-fluid">
 
         <!-- Header image-->
@@ -9,16 +9,28 @@
                 <div class="container">
                     <div class="row">
                         <div class ="col col-md-8">
-                            <div class="input-group">
-                                <input type="text" class="form-control search_bar" placeholder="Search" name="search">
+                            <div class="input-group" id="searchbar">
+                                <input type="text" autocomplete="off" class="live-search-box form-control search_bar dropdown-toggle" data-toggle="dropdown" placeholder="Search" name="search">
+                                <ul class="dropdown-menu live-search-list">
+                                    <li><a href="#">Coffee</a></li>
+                                    <li><a href="#">Tea</a></li>
+                                    <li><a href="#">Sandwiches</a></li>
+                                    <li><a href="#">Hot Chocolate</a></li>
+                                    <li><a href="#">Breakfast</a></li>
+                                    <li><a href="#">Lunch</a></li>
+                                    <li><a href="#">Dinner</a></li>
+                                    <li><a href="#">Snacks</a></li>
+                                </ul>
+
                                 <div class="input-group-btn">
                                     <button type="button" class="btn btn-default btn-lg pull-left search_button">
-                        <span class="glyphicon glyphicon-search"></span> Search
-                    </button>
+                                        <span class="glyphicon glyphicon-search"></span> Search
+                                    </button>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div></div>
 
@@ -32,15 +44,15 @@
             <div class="container">
                 <div class="form-group row">
                     <form><div class="col-xs-4">
-                        <textarea class="form-control" id = "review1" rows="5" type = "text"></textarea>
+                        <textarea class="form-control form-width" id = "review1" rows="5" type = "text"></textarea>
 
                         </div>
                         <div class="col-xs-4">
-                            <textarea class="form-control" id = "review2" rows="5" type = "text"></textarea>
+                            <textarea class="form-control form-width" id = "review2" rows="5" type = "text"></textarea>
 
                         </div>
                         <div class="col-xs-4">
-                            <textarea class="form-control" id = "review3" rows="5" type = "text"></textarea>
+                            <textarea class="form-control form-width" id = "review3" rows="5" type = "text"></textarea>
 
                         </div>
 
@@ -48,8 +60,8 @@
                 </div>
             </div>
         </div>
-            <!-- Favourites-->
-            <div class="wrap">
+        <!-- Favourites-->
+        <div class="wrap">
             <div class="container">
                     <div class="row mt">
                         <a href="/">
@@ -73,6 +85,7 @@
                                 <p class="titleLower">Cheapest Hot Chocolate</p>
                             </div>
                         </a>
+
                     </div>
 
                     <div class="row mt">
@@ -101,31 +114,42 @@
 
                     </div>
                 </div>
+
             </div>
-                <!-- Sponsors-->
-                <div class="container">
-                    <div class="row mt centered">
-                        <div class="col-lg-6 col-lg-offset-3">
-                            <h1>Our Sponsors</h1>
-                        </div>
+
+            <!-- Sponsors-->
+            <div class="container">
+                <div class="row mt centered">
+                    <div class="col-lg-6 col-lg-offset-3">
+                        <h1>Our Sponsors</h1>
                     </div>
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-4 col-md-4 col-xs-4 thumb">
-                                <a class="thumbnail" href="#">
-                                    <img class="img-responsive" src="images/sult.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="col-lg-4 col-md-4 col-xs-4 thumb">
-                                <a class="thumbnail" href="#">
-                                    <img class="img-responsive" src="images/smokeys.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="col-lg-4 col-md-4 col-xs-4 thumb">
-                                <a class="thumbnail" href="#">
-                                    <img class="img-responsive" src="images/wall.jpg" alt="">
-                                </a>
-                            </div></div>
+                </div>
+            </div>
 
-
-
+            <!-- Sponsors-->
+        <div class="container">
+            <div class="row mt centered">
+                <div class="col-lg-6 col-lg-offset-3">
+                    <h1>Sponsors</h1>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-xs-4 thumb">
+                        <a class="thumbnail" href="#">
+                            <img class="img-responsive" src="images/sult.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-xs-4 thumb">
+                        <a class="thumbnail" href="#">
+                            <img class="img-responsive" src="images/smokeys.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-xs-4 thumb">
+                        <a class="thumbnail" href="#">
+                            <img class="img-responsive" src="images/wall.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>

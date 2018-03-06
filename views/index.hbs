@@ -9,16 +9,26 @@
                 <div class="container">  
                     <div class="row">
                         <div class ="col col-md-8">   
-                            <div class="input-group">
-                                <input type="text" class="form-control search_bar" placeholder="Search" name="search">
+                            <div class="input-group" id="searchbar">                 <input type="text" autocomplete="off" class="live-search-box form-control search_bar dropdown-toggle" data-toggle="dropdown"  placeholder="Search" name="search">
+                                <ul class="dropdown-menu live-search-list">
+                                    <li><a href="#">Coffee</a></li>
+                                    <li><a href="#">Tea</a></li>
+                                    <li><a href="#">Sandwiches</a></li>
+                                    <li><a href="#">Hot Chocolate</a></li>
+                                    <li><a href="#">Breakfast</a></li>
+                                    <li><a href="#">Lunch</a></li>
+                                    <li><a href="#">Dinner</a></li>
+                                    <li><a href="#">Snacks</a></li>
+                                </ul>
                                 <div class="input-group-btn">
                                     <button type="button" class="btn btn-default btn-lg pull-left search_button">
-                        <span class="glyphicon glyphicon-search"></span> Search
-                    </button>
+                                        <span class="glyphicon glyphicon-search"></span> Search
+                                    </button>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div></div>
 
@@ -53,28 +63,29 @@
                 </div>
             </div>
         </div>
-            <!-- Favourites-->
-            <div class="wrap">
+        <!-- Favourites-->
+        <div class="wrap">
             <div class="container">
                 <div class="row mt centered">
                     <div class="col-lg-6 col-lg-offset-3">
                         <h1>Your Favourites</h1>
+                        <h7>An up to date guide of the best prices on campus</h7>
                     </div>
                 </div>
                 <div class="container">
                     <div class="form-group row">
                         <form><div class="col-xs-4">
-                            <label class="style_label">Cheapest Coffee</label> 
+                            <label class="style_label">Coffee</label> 
                             <textarea class="form-control form-width" id = "cheapest_coffee" rows="5" type = "text"></textarea>
 
                             </div>
                             <div class="col-xs-4">
-                                <label class="style_label">Cheapest Tea</label>
+                                <label class="style_label">Tea</label>
                                 <textarea class="form-control form-width" id = "cheapest_tea" rows="5" type = "text"></textarea>
 
                             </div>
                             <div class="col-xs-4">
-                                <label class="style_label">Cheapest Hot Chocolate</label>
+                                <label class="style_label">Hot Chocolate</label>
                                 <textarea class="form-control form-width" id = "cheapest_hot_chocolate" rows="5" type = "text"></textarea>
 
                             </div>
@@ -84,12 +95,12 @@
 
                     <div class="form-group row">
                         <form><div class="col-xs-4">
-                            <label class="style_label">Best Scones</label>
+                            <label class="style_label">Scones</label>
                             <textarea class="form-control form-width" id = "best_scones" rows="5" type = "text"></textarea>
 
                             </div>
                             <div class="col-xs-4">
-                                <label class="style_label">Cheapest Sandwich</label>
+                                <label class="style_label">Sandwiches</label>
                                 <textarea class="form-control form-width" id = "cheapest_sandwich" rows="5" type = "text"></textarea>
 
                             </div>
@@ -102,32 +113,32 @@
                         </form>
                     </div>
                 </div>
+            </div>
+        </div>
+        <!-- Sponsors-->
+        <div class="container">
+            <div class="row mt centered">
+                <div class="col-lg-6 col-lg-offset-3">
+                    <h1>Sponsors</h1>
                 </div>
             </div>
-                <!-- Sponsors-->
-                <div class="container">
-                    <div class="row mt centered">
-                        <div class="col-lg-6 col-lg-offset-3">
-                            <h1>Sponsors</h1>
-                        </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-xs-4 thumb">
+                        <a class="thumbnail" href="#">
+                            <img class="img-responsive" src="images/sult.jpg" alt="">
+                        </a>
                     </div>
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-4 col-md-4 col-xs-4 thumb">
-                                <a class="thumbnail" href="#">
-                                    <img class="img-responsive" src="images/sult.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="col-lg-4 col-md-4 col-xs-4 thumb">
-                                <a class="thumbnail" href="#">
-                                    <img class="img-responsive" src="images/smokeys.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="col-lg-4 col-md-4 col-xs-4 thumb">
-                                <a class="thumbnail" href="#">
-                                    <img class="img-responsive" src="images/wall.jpg" alt="">
-                                </a>
-                            </div></div>
+                    <div class="col-lg-4 col-md-4 col-xs-4 thumb">
+                        <a class="thumbnail" href="#">
+                            <img class="img-responsive" src="images/smokeys.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-xs-4 thumb">
+                        <a class="thumbnail" href="#">
+                            <img class="img-responsive" src="images/wall.jpg" alt="">
+                        </a>
+                    </div></div>
 
 
 

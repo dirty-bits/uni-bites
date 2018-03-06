@@ -26,9 +26,8 @@
  }
 .style_label {
     color: #2D9CDB;
-    font-family: "Lato";
-    font-weight: bold;
-    font-size: 25px;
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
     display: block;
     padding-left: 10px;
 
@@ -48,4 +47,11 @@
 }
 .form-width {
     width: 250px;
+}
+h7
+{
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    color: #333;
+    font-size: 20px;
 }

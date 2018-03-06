@@ -3,11 +3,11 @@
 }
 
 .navigation {
-    padding: 15px;
+    padding: 30px;
     background-color: transparent;
 }
 .navigation.alt-color {
-    background-color: #b3d9ff;
+    background-color: #F2944A;
 }
 
 .navLinks li a {
@@ -15,7 +15,7 @@
 }
 
 .navLinks:last-child {
-    margin-right: 15px !important;
+    margin-right: 50px !important;
 }
 
 .specialButton {

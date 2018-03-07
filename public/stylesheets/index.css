@@ -1,10 +1,11 @@
-.backgroundimg{
+.backgroundimg {
     background-image: url("../images/meal2.jpg");
     background-size: cover;
     height: 95vh;
     overflow-x: hidden;
     overflow-y: hidden;
 }
+
 .search_bar {
     margin-top: 300px;
     border-radius: 5px;
@@ -14,6 +15,7 @@
     height: 43px;
     display: inline-block;
 }
+
 .search_button {
     margin-top: 300px;
     border-radius: 5px;
@@ -24,14 +26,15 @@
     display: inline-block;
     background-color: #F2994A;
  }
+
 .style_label {
     color: #2D9CDB;
     font-family: "Roboto", sans-serif;
     font-size: 20px;
     display: block;
     padding-left: 10px;
-
 }
+
 .wrap {
     background-color: #E0DADA;
 	margin-top: 20px;
@@ -39,7 +42,7 @@
 	min-height: 50px;
     overflow-x: hidden;
     overflow-y: hidden;
-    padding: 0px 0px 20px 50px;
+    padding: 0px 0px 0px 50px;
 }
 
 .quickBox {
@@ -49,16 +52,19 @@
     color: white;
     line-height: 150px;
 }
+
 .main-color {
     background-color: #ffffff !important;
 }
+
 .form-width {
     width: 250px;
 }
-h7
-{
-    font-family: 'Lato', sans-serif;
-    font-weight: 300;
-    color: #333;
-    font-size: 20px;
+
+.toRight {
+    padding: 0px 0px 0px 25px;
+}
+
+.alignText {
+    padding: 0px 0px 0px 10px;
 }

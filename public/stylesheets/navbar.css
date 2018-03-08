@@ -28,14 +28,20 @@
     border: 3px solid #F2944A;
     border-radius: 5px;
     font-weight: 700;
+   
+    
+}
+.specialButton.alt-border {
+    border: 3px solid #f2f2f2;
 }
 
 .specialButton:hover {
-    background-color: #F2944A;
+    background-color: #2D9CDB;
 }
 
 ul.nav a:hover {
-    background-color: #F2944A !important;
+    background-color: #2D9CDB !important;
+    padding-bottom: 20px;
 }
 
 .brand {

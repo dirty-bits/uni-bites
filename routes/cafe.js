@@ -31,7 +31,7 @@ router.get('/:cafename', function(req, res, next) {
 
     console.log("Cafe Name: " + cafeTitle);
 
-	res.render('cafe', { title: cafeTitle, cafes: cafes, cafe: cafeTitle});
+	res.render('cafe', { title: cafeTitle + " | Uni-Bites", cafes: cafes, cafe: cafeTitle});
 });
 
 

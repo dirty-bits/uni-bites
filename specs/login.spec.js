@@ -1,7 +1,7 @@
 // spec.js
 describe('uni-bites login tests', function() {
   var until = protractor.ExpectedConditions;
-  var txtUsername;
+  var txtEmail;
   var txtPassword;
   var btnSubmit;
 
@@ -9,7 +9,7 @@ describe('uni-bites login tests', function() {
     browser.waitForAngularEnabled(false);
     browser.get(browser.params.baseUrl + '/login'); // rework to page pattern see : http://blog.scottlogic.com/2015/11/06/ProtractorForBeginnersPart1.html
 
-    txtUsername = element(by.id("inputUsername"));
+    txtEmail = element(by.id("inputEmail"));
     txtPassword = element(by.id("inputPassword"));
     errorMessage = element(by.id("swal2-content"));
 
@@ -21,7 +21,7 @@ describe('uni-bites login tests', function() {
   });
 
   it('should fail if login details are left empty', function(){
-    txtUsername.sendKeys('');
+    txtEmail.sendKeys('');
     txtPassword.sendKeys('');
 
     btnSubmit.click();
@@ -29,11 +29,11 @@ describe('uni-bites login tests', function() {
     // <div class="swal2-container swal2-center swal2-fade swal2-shown"> 
     // to become invisible
 
-    expect(errorMessage.getText()).toBe("Please enter a username and password.");
+    expect(errorMessage.getText()).toBe("Please enter an email and password.");
   });
 
   it('should fail if password is empty', function(){
-    txtUsername.sendKeys('Test');
+    txtEmail.sendKeys('Test');
     txtPassword.sendKeys('');
 
     btnSubmit.click();
@@ -41,11 +41,11 @@ describe('uni-bites login tests', function() {
     // <div class="swal2-container swal2-center swal2-fade swal2-shown"> 
     // to become invisible
 
-    expect(errorMessage.getText()).toBe("Please enter a username and password.");
+    expect(errorMessage.getText()).toBe("Please enter an email and password.");
   });
 
-  it('should fail if username is empty', function(){
-    txtUsername.sendKeys('');
+  it('should fail if email is empty', function(){
+    txtEmail.sendKeys('');
     txtPassword.sendKeys('Password');
 
     btnSubmit.click();
@@ -53,11 +53,11 @@ describe('uni-bites login tests', function() {
     // <div class="swal2-container swal2-center swal2-fade swal2-shown"> 
     // to become invisible
 
-    expect(errorMessage.getText()).toBe("Please enter a username and password.");
+    expect(errorMessage.getText()).toBe("Please enter an email and password.");
   });
 
-  it('should fail if an incorrect username/password is entered', function(){
-    txtUsername.sendKeys('IncorrectUser');
+  it('should fail if an incorrect email/password is entered', function(){
+    txtEmail.sendKeys('IncorrectUser');
     txtPassword.sendKeys('IncorrectPassword');
 
     btnSubmit.click();
@@ -65,14 +65,14 @@ describe('uni-bites login tests', function() {
     // <div class="swal2-container swal2-center swal2-fade swal2-shown"> 
     // to become invisible
 
-    expect(errorMessage.getText()).toBe("Invalid username/passsword.");
+    expect(errorMessage.getText()).toBe("Invalid email/passsword.");
   });
 
-  it('should pass if a correct username/password combination is entered', function(){
-    txtUsername.sendKeys(browser.params.validUser.name);
+  it('should pass if a correct email/password combination is entered', function(){
+    txtEmail.sendKeys(browser.params.validUser.name);
     txtPassword.sendKeys(browser.params.validUser.password);
 
-//    txtUsername.sendKeys('test');
+//    txtEmail.sendKeys('test');
 //    txtPassword.sendKeys('test');
 
     btnSubmit.click();

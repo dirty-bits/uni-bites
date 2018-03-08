@@ -8,10 +8,11 @@ router.get('/register', function(req, res, next) {
 });
 
 router.post('/users/register', function(req, res, next) {
-    var username = req.body.user_name;
+    var email = req.body.email;
     var password = req.body.password;
+    var full_name = req.body.full_name;
     // Check if account already exists
-    User.findOne({ 'user_name' : username }, function(err, user) {
+    User.findOne({ 'email' : email }, function(err, user) {
         if (err)
             throw err;
 
@@ -21,7 +22,7 @@ router.post('/users/register', function(req, res, next) {
         if (user) {
             res.status(401).json({
                 "status": "info",
-                "body": "Username already taken"
+                "body": "Email address already taken"
             });
         } 
         else 
@@ -29,9 +30,9 @@ router.post('/users/register', function(req, res, next) {
             // If there is no user with that username create the user
             var newUser = new User();
             // set the user's local credentials
-            newUser.user_name = username;
+            newUser.full_name = full_name;
             newUser.password_hash = newUser.generateHash(password);
-            newUser.access_token = createJwt({user_name:username});
+            newUser.access_token = createJwt({email:email});
             newUser.save(function(err, user) {
 
                 if (err)

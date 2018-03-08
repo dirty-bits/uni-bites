@@ -6,14 +6,14 @@ $(document).ready( function() {
         event.preventDefault();
         // data checking
 
-        var user_name = event.target.inputUsername.value;
+        var full_name = event.target.inputFullName.value;
         var email = event.target.inputEmail.value;
         var password = event.target.inputPassword.value;
         var confirm_password = event.target.inputConfirmPassword.value;
 
         var message = "";
-        if(user_name.length == 0){
-            message += "Please enter a username.<br/>";
+        if(full_name.length == 0){
+            message += "Please enter a full name.<br/>";
         }
     
         if(email.length == 0){
@@ -45,10 +45,10 @@ $(document).ready( function() {
             url: '/users/register',
             dataType: 'json',
             data: {
-                'user_name': event.target.inputUsername.value,
-                'email': event.target.inputEmail.value,
-                'password': event.target.inputPassword.value,
-                'confirm_password': event.target.inputConfirmPassword.value
+                'full_name': full_name,
+                'email': email,
+                'password': password,
+                'confirm_password': confirm_password
             },
             success: function(token){
                 $(location).attr('href', '/feed' );

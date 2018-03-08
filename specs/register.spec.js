@@ -4,7 +4,7 @@ var User = require('../models/user');
 
 describe('uni-bites user registration', function() {
   var until = protractor.ExpectedConditions;
-  var txtUsername;
+  var txtFullName;
   var txtEmail;
   var txtPassword;
   var txtConfirmPassword;
@@ -14,7 +14,8 @@ describe('uni-bites user registration', function() {
     browser.waitForAngularEnabled(false);
     browser.get(browser.params.baseUrl + '/register'); // rework to page pattern see : http://blog.scottlogic.com/2015/11/06/ProtractorForBeginnersPart1.html
 
-    txtUsername = element(by.id("inputUsername"));
+      
+    txtFullName = element(by.id("inputFullName"));
     txtEmail = element(by.id("inputEmail"));
     txtPassword = element(by.id("inputPassword"));
     txtConfirmPassword = element(by.id("inputConfirmPassword"));
@@ -39,19 +40,20 @@ describe('uni-bites user registration', function() {
     expect(browser.getTitle()).toEqual('uni-bites - Register');
   });
 
-  it('should fail if username is empty', function(){
-    txtUsername.sendKeys("");
+  it('should fail if full name is empty', function(){
+    txtFullName.sendKeys("");
 
     btnSubmit.click();
     browser.sleep(500);// <-- really really bad remove later by waiting for the div:
     // <div class="swal2-container swal2-center swal2-fade swal2-shown"> 
     // to become invisible
 
-    expect(errorMessage.getText()).toContain("Please enter a username.");
+    expect(errorMessage.getText()).toContain("Please enter a full name
+                                             .");
   });
 
   it('should fail if the email is empty', function(){
-    txtUsername.sendKeys(browser.params.registerUser.name);
+    txtFullName.sendKeys(browser.params.registerUser.name);
     txtEmail.sendKeys("");
 
     btnSubmit.click();
@@ -63,7 +65,7 @@ describe('uni-bites user registration', function() {
   });
 
   it('should fail if the password does not match the confirmation password', function(){
-    txtUsername.sendKeys(browser.params.registerUser.name);
+    txtFullName.sendKeys(browser.params.registerUser.name);
     txtEmail.sendKeys(browser.params.registerUser.email);
 
     txtPassword.sendKeys("1");
@@ -78,7 +80,7 @@ describe('uni-bites user registration', function() {
   });
 
   it('should add the user and show the logged in page if successful', function(){
-    txtUsername.sendKeys(browser.params.registerUser.name);
+    txtFullName.sendKeys(browser.params.registerUser.name);
     txtEmail.sendKeys(browser.params.registerUser.email);
     txtPassword.sendKeys(browser.params.registerUser.password);
     txtConfirmPassword.sendKeys(browser.params.registerUser.password);

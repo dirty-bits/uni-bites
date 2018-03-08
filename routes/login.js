@@ -12,9 +12,9 @@ router.get('/', function(req, res, next) {
 router.post('/', function(req, res, next) {
     console.log("POST: Login. \n%s	 ", JSON.stringify (req.body));
 
-    var username = req.body.user_name;
+    var email = req.body.email;
     var password = req.body.password;
-    User.findOne({'user_name': username}, function (err, user) {
+    User.findOne({'email': email}, function (err, user) {
         // if there are any errors, return the error
 		if (err) {
 			console.log("/users/login User.findOne Erro: \n\t%s", JSON.stringify(err));
@@ -36,7 +36,7 @@ router.post('/', function(req, res, next) {
             // Compare passwords
             if (validLogin) {
                 // Success : Assign new access token for the session
-                user.access_token = createJwt({user_name: username});
+                user.access_token = createJwt({email: email});
                 console.log("user.access_token: %s ", user.access_token);
 
                 user.save();
@@ -49,14 +49,14 @@ router.post('/', function(req, res, next) {
             else {
                 res.status(401).send({
                     "status": "error",
-                    "body": "Invalid username/passsword." // should not differentiate error messages at this level (imformation leak, could check usernames / emails)
+                    "body": "Invalid email/passsword." // should not differentiate error messages at this level (imformation leak, could check usernames / emails)
                 });
             }
         }
         else {
             res.status(401).send({
                 "status": "error",
-                "body": "Invalid username/passsword." // should not differentiate error messages at this level (imformation leak, could check usernames / emails)
+                "body": "Invalid email/passsword." // should not differentiate error messages at this level (imformation leak, could check usernames / emails)
             });
         }
     }); 

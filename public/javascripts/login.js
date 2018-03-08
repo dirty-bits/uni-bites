@@ -5,12 +5,12 @@ $(document).ready( function() {
     $("#log-form").submit(function (event) {
         event.preventDefault();
 
-        var username = event.target.inputUsername.value;
+        var email = event.target.inputEmail.value;
         var password = event.target.inputPassword.value;
 
-        if(username.length == 0 || password.length == 0) {
+        if(email.length == 0 || password.length == 0) {
             swal('Error',
-                'Please enter a username and password.', // TODO: this should be from a file
+                'Please enter an email and password.', // TODO: this should be from a file
                 'error');
 
             return;
@@ -21,8 +21,8 @@ $(document).ready( function() {
             url: '/login',
             dataType: 'json',
             data: {
-                'user_name': event.target.inputUsername.value,
-                'password': event.target.inputPassword.value
+                'user_name': email,
+                'password': password
             },
             success: function(token){
                 $(location).attr('href', '/feed');

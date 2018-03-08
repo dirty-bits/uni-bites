@@ -34,10 +34,10 @@
   display: block;
   font-weight:normal;
   margin: 20px 0; 
-  text-align: Center;
 }
  
 .menu-item {
+  font-family: roboto;
   margin: 24px 0;
   font-size: 18px;
 }

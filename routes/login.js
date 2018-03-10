@@ -5,7 +5,7 @@ var User = require('../models/user');
 
 /* GET login page. */
 router.get('/', function(req, res, next) {
-	res.render('login', { title: 'uni-bites - Login' });
+	res.render('login', { title: 'uni-bites - Login', layout: 'no-header' });
 });
 
 

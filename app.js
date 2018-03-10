@@ -1,4 +1,6 @@
 var express = require('express');
+var hbs = require('express-hbs');
+
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
@@ -16,10 +18,26 @@ var privacyPolicy = require('./routes/privacy-policy');
 var aboutUs = require('./routes/about-us');
 var careers = require('./routes/careers');
 
+// Use `.hbs` for extensions and find partials in `views/partials`.
 var app = express();
-// view engine setup
-app.set('views', path.join(__dirname, 'views'));
+app.engine('hbs', hbs.express4({
+  partialsDir: __dirname + '/views/partials',
+  layoutsDir: __dirname + '/views/layouts',
+  defaultLayout: __dirname + '/views/layouts/layout.hbs'
+}));
 app.set('view engine', 'hbs');
+app.set('views', __dirname + '/views');
+
+// http://expressjs.com/api.html#app.locals
+app.locals.PROD_MODE = ('production' === app.get('env'));
+
+/*
+  // original express setup
+  var app = express();
+  // view engine setup
+  app.set('views', path.join(__dirname, 'views'));
+  app.set('view engine', 'hbs');
+*/
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
@@ -30,11 +48,11 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
-app.use('/', commentsAPI);
+app.use('/', commentsAPI);  //TODO: Move this to its own api/Section, check mongodb api
 app.use('/users', users);
 app.use('/login', login);
 app.use('/feed', feed);
-app.use('/', register);
+app.use('/', register);     //TODO: revert this
 app.use('/cafe', cafe);
 app.use('/privacy-policy', privacyPolicy);
 app.use('/about-us', aboutUs);

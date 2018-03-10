@@ -4,7 +4,7 @@ var jwt = require('jsonwebtoken');
 var User = require('../models/user');
 
 router.get('/register', function(req, res, next) {
-    res.render("register", {title:"uni-bites - Register"});
+    res.render("register", {title:"uni-bites - Register", layout: 'no-header'});
 });
 
 router.post('/users/register', function(req, res, next) {

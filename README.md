@@ -70,9 +70,11 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+* **Daniel McFadden** - *SCRUM Master* - [GitHub](https://github.com/dmcfaddengalway)
+* **Marinella Gallo** - *Design Leader* - [GitHub](https://github.com/elliebobellie)
+* **Alan Flaherty** - *Backend & Testing Leader* [GitHub](https://github.com/aflaherty13)
+* **Aoife Downey** - *Database Leader* [GitHub](https://github.com/aoifeDowney)
+* **Joan Rohan** - *Resource Leader* [GitHub](https://github.com/jrohan1)
 
 ## License
 

@@ -48,8 +48,7 @@ describe('uni-bites user registration', function() {
     // <div class="swal2-container swal2-center swal2-fade swal2-shown"> 
     // to become invisible
 
-    expect(errorMessage.getText()).toContain("Please enter a full name
-                                             .");
+    expect(errorMessage.getText()).toContain("Please enter a full name.");
   });
 
   it('should fail if the email is empty', function(){

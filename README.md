@@ -1,5 +1,5 @@
 # uni-bites
-Application to compare cost at various university shops
+Uni-Bites is a web-app that compares, contrasts and presents the cafe and deli services on the NUI Galway campus in a format aimed to save students money, while supporting friendly and ethical business practices.
 
 ## Getting Started
 

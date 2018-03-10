@@ -6,11 +6,9 @@
     "start": "nodemon ./bin/www",
     "copy-bootstrap-files": "cp -r ./node_modules/bootstrap/dist ./public/bootstrap/",
     "populate-db": "node data/populate-db.js",
-
     "test": "protractor specs/conf.js",
-
-    "test:once": "webdriver-manager update",
-    "test:web-driver": "./node_modules/.bin/webdriver-manager start",
+    "test:once": "webdriver-manager update --versions.chrome=2.16",
+    "test:web-driver": "webdriver-manager start",
     "test:servers": "concurrently 'npm start' 'npm run test:web-driver'"
   },
   "dependencies": {
@@ -20,6 +18,7 @@
     "cookie-parser": "^1.4.3",
     "debug": "^2.6.9",
     "express": "^4.15.5",
+    "express-handlebars": "^3.0.0",
     "hbs": "^4.0.1",
     "jsonwebtoken": "^8.1.1",
     "mongoose": "^4.13.11",

@@ -1,0 +1,64 @@
+<h4>Global variable test - foo</h4>
+<code>
+    &lcub;&lcub;foo&rcub;&rcub;
+</code>
+
+{{foo}}
+
+<hr/>
+
+layout name {{layout}}
+
+{{> my_partial}}
+
+<hr/>
+
+<h4>Variable Test from routing handler</h4>
+
+<code>
+    &lcub;&lcub;#numbers&rcub;&rcub;<br/>
+        &lcub;&lcub;name&rcub;&rcub;&lt;br/&gt;<br/>
+    &lcub;&lcub;/numbers&rcub;&rcub;<br/>
+</code>
+
+{{#numbers}}
+    {{name}}:{{urlTag}}<br/>
+{{/numbers}}
+
+<hr/>
+
+<h4>Global variable test</h4>
+<code>
+&lcub;&lcub;#cafes&rcub;&rcub;<br/>
+    &lcub;&lcub;name&rcub;&rcub;&lt;br/&gt;<br/>
+&lcub;&lcub;/cafes&rcub;&rcub;<br/>
+</code>
+{{#cafes}}
+    {{name}}<br/>
+{{/cafes}}
+
+<hr/>
+
+<h4>Include partial test</h4>
+<code>
+&lcub;&lcub;> test &rcub;&rcub;
+</code>
+{{> test }}
+
+<hr/>
+
+<h4>Include partial with parameter test</h4>
+<code>
+&lcub;&lcub;&gt; test data=&quot;this is my test parameter&quot;&rcub;&rcub;
+</code>
+{{> test data="this is my test parameter"}}
+
+<hr/>
+
+<h4>Include partial with data list</h4>
+<code>
+&lcub;&lcub;&gt; test_with_list mycafes=cafes&rcub;&rcub;
+</code>
+{{> test_with_list mycafes=cafes}}
+
+<hr/>

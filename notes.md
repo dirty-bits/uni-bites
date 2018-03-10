@@ -122,3 +122,10 @@ run.
 
 [Common errors with ui tests]
  * 
+
+
+# Node Documentation
+http://expressjs.com/en/4x/api.html#res
+
+# Partials and different layouts
+https://github.com/ericf/express-handlebars/blob/master/examples/advanced/server.js

@@ -1,14 +1,15 @@
 // spec.js
-var mongoose = require('mongoose');
+// var mongoose = require('mongoose');
 var User = require('../models/user');
 
 describe('uni-bites user registration', function() {
-  var until = protractor.ExpectedConditions;
+  // var until = protractor.ExpectedConditions;
   var txtFullName;
   var txtEmail;
   var txtPassword;
   var txtConfirmPassword;
   var btnSubmit;
+  var errorMessage;
 
   beforeEach(function(){
     browser.waitForAngularEnabled(false);
@@ -25,7 +26,7 @@ describe('uni-bites user registration', function() {
     btnSubmit = element(by.css("button[type='submit']"));
   });
 
-  removeUser = false;
+  var removeUser = false;
   afterEach(function(){
     // this is a better place to have db tidyup code, but there should not be any need 
     // to run it when it is not necessary (database has not been updated);

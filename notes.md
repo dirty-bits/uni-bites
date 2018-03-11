@@ -121,4 +121,12 @@ data in the database and we could start from a known point each time the ui-test
 run.   
 
 [Common errors with ui tests]
- * 
+ * Not running `npm run test:once` after running `npm install` 
+
+
+
+# Node Documentation
++http://expressjs.com/en/4x/api.html#res
++
++# Partials and different layouts
++https://github.com/ericf/express-handlebars/blob/master/examples/advanced/server.js

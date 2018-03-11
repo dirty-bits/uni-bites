@@ -52,7 +52,7 @@ app.use('/', commentsAPI);  //TODO: Move this to its own api/Section, check mong
 app.use('/users', users);
 app.use('/login', login);
 app.use('/feed', feed);
-app.use('/', register);     //TODO: revert this
+app.use('/register', register);
 app.use('/cafe', cafe);
 app.use('/privacy-policy', privacyPolicy);
 app.use('/about-us', aboutUs);

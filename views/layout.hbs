@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="">
         <meta name="author" content="">
-        <link rel="shortcut icon" href="images/favicon.png">
+        <link rel="shortcut icon" href="/images/favicon.png">
         <meta name="google-signin-scope" content="profile email">
         <meta name="google-signin-client_id" content="188255152888-kompatv2pfo0uai3c0opl5fc7r0drg1i.apps.googleusercontent.com">
         <script src="https://apis.google.com/js/platform.js" async defer></script>
@@ -14,18 +14,18 @@
         <title>{{title}}</title>
 
         <!-- Bootstrap core CSS -->
-        <link href="stylesheets/bootstrap.css" rel="stylesheet">
+        <link href="/stylesheets/bootstrap.css" rel="stylesheet">
 
         <!-- Custom styles for this template -->
-        <link href="stylesheets/main.css" rel="stylesheet">
+        <link href="/stylesheets/main.css" rel="stylesheet">
 
-        <link href="stylesheets/navbar.css" rel="stylesheet">
-        <link href="stylesheets/index.css" rel="stylesheet">
-        <link href="stylesheets/login.css" rel="stylesheet">
-        <link href="stylesheets/register.css" rel="stylesheet">
-        <link href="stylesheets/font.css" rel="stylesheet">
-        <link href="stylesheets/sharedComponents.css" rel="stylesheet">
-        <link href="stylesheets/cafe.css" rel="stylesheet">
+        <link href="/stylesheets/navbar.css" rel="stylesheet">
+        <link href="/stylesheets/index.css" rel="stylesheet">
+        <link href="/stylesheets/login.css" rel="stylesheet">
+        <link href="/stylesheets/register.css" rel="stylesheet">
+        <link href="/stylesheets/font.css" rel="stylesheet">
+        <link href="/stylesheets/sharedComponents.css" rel="stylesheet">
+        <link href="/stylesheets/cafe.css" rel="stylesheet">
 
         <!-- Fonts Awesome -->
         <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
@@ -61,7 +61,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                      <a class="navbar-brand brand" href="/"><img class="img-fluid" src="images/logoB.png" height = "60px" alt="logo">
+                      <a class="navbar-brand brand" href="/"><img class="img-fluid" src="/images/logoB.png" height = "60px" alt="logo">
                         </a>
                 </div>
 
@@ -75,6 +75,11 @@
                                 <span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu">
+                                {{#each cafes}}
+                                    <li><a href="/cafe/{{urlTag}}">{{name}}</a></li>
+                                {{/each}}
+
+<!--
                                 <li><a href="#">An Bialann</a></li>
                                 <li><a href="/cafe">Smokeys</a></li>
                                 <li><a href="#">Sult</a></li>
@@ -83,6 +88,7 @@
                                 <li><a href="#">Cloud Cafe</a></li>
                                 <li><a href="#">The Wall</a></li>
                                 <li><a href="#">Caife na Gaeilge</a></li>
+-->
                             </ul>
                         </li>
                         <li>
@@ -90,7 +96,7 @@
                         </li>
                         <li class="specialButton">
                             <a href="/login">Login/Register</a>
-                        </li>                  
+                        </li>
                     </ul>
                 </div><!--/.nav-collapse -->
             </div>
@@ -102,11 +108,11 @@
         ================================================== -->
         <!-- Placed at the end of the document so the pages load faster -->
         <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-        <script src="javascripts/bootstrap.min.js"></script>
-        <script src="javascripts/feed.js"></script>
-        <script src="javascripts/login.js"></script>
-        <script src="javascripts/register.js"></script>
-        <script src="javascripts/index.js"></script>
-        <script src="javascripts/layout.js"></script>
+        <script src="/javascripts/bootstrap.min.js"></script>
+        <script src="/javascripts/feed.js"></script>
+        <script src="/javascripts/login.js"></script>
+        <script src="/javascripts/register.js"></script>
+        <script src="/javascripts/index.js"></script>
+        <script src="/javascripts/layout.js"></script>
     </body>
 </html>

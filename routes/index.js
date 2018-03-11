@@ -7,8 +7,6 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'uni-bites' });
 });
 
-
-
 /* GET login page.
 router.get('/login', function(req, res, next) {
   res.render('login', { title: 'uni-bites' });

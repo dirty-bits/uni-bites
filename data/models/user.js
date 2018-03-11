@@ -5,8 +5,7 @@ var Schema = mongoose.Schema;
 require('./util');
 
 var usersSchema = new Schema({
-    full_name: {type: String},
-    email: {type: String},
+    user_name: {type: String},
     password_hash: {type: String},
     date_created: {type: Date, default: new Date()},
     fb_id:{ type: String, default: null },

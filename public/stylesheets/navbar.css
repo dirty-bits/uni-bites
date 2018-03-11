@@ -1,7 +1,49 @@
-.front {
-    padding-left: 15px;
+.logoBox {
+    padding: 15px;
 }
-.position {
-    padding: 10px 0px;
+
+.navigation {
+    padding: 30px;
+    background-color: transparent;
+    transition: background-color 1s ease-in-out;
+    -webkit-transition: background-color 1s ease-in-out;
+    -moz-transition: background-color 1s ease-in-out;
+    -o-transition: background-color 1s ease-in-out;
+    -ms-transition: background-color 1s ease-in-out;
+}
+
+.navigation.alt-color {
+    background-color: #F2944A;
+}
+
+.navLinks li a {
+    font-family: "Roboto", sans-serif;
+}
+
+.navLinks:last-child {
+    margin-right: 50px !important;
+}
+
+.specialButton {
+    border: 3px solid #F2944A;
+    border-radius: 5px;
+    font-weight: 700;
+   
     
+}
+.specialButton.alt-border {
+    border: 3px solid #f2f2f2;
+}
+
+.specialButton:hover {
+    background-color: #2D9CDB;
+}
+
+ul.nav a:hover {
+    background-color: #2D9CDB !important;
+    padding-bottom: 20px;
+}
+
+.brand {
+    padding: 0px 0px;
 }

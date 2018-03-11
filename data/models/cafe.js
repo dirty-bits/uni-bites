@@ -5,8 +5,8 @@ var Schema = mongoose.Schema;
 require('./util');
 
 var cafeSchema = new mongoose.Schema({
-  name:  {type: String},
-  location:  {type: String}
+  name: String,
+  location: String
 });
 
-module.exports =  mongoose.model('unibites-cafes', cafeSchema);
+module.exports = mongoose.model('cafe', cafeSchema);

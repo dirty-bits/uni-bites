@@ -10,4 +10,4 @@ var commentSchema = new Schema({
     down_votes: {type: Number, default: 0}
 });
 
-module.exports = mongoose.model('unibites-comments', commentSchema);
+module.exports = mongoose.model('firstapp-comments', commentSchema);

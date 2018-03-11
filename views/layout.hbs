@@ -11,30 +11,32 @@
         <title>{{title}}</title>
 
         <!-- Bootstrap core CSS -->
-        <link href="stylesheets/bootstrap.css" rel="stylesheet">
+        <link href="/stylesheets/bootstrap.css" rel="stylesheet">
 
         <!-- Custom styles for this template -->
-        <link href="stylesheets/main.css" rel="stylesheet">
+        <link href="/stylesheets/main.css" rel="stylesheet">
 
         <!-- Fonts from Google Fonts -->
         <link href='http://fonts.googleapis.com/css?family=Lato:300,400,900' rel='stylesheet' type='text/css'>
+
+        <link href="/stylesheets/navbar.css" rel="stylesheet">
+        <link href="/stylesheets/login.css" rel="stylesheet">
+        <link href="/stylesheets/register.css" rel="stylesheet">
+        <link href="/stylesheets/font.css" rel="stylesheet">
+        <link href="/stylesheets/sharedComponents.css" rel="stylesheet">
 
         <!-- Fonts Awesome -->
         <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
 
         <!-- Sweet Alert -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.11.4/sweetalert2.all.min.js"></script>
-        <!--Drop down menu -->
-        <link  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-        <script src="http://code.jquery.com/jquery-1.11.3.js"></script>
-        <!-- 
-<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
-<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-<![endif]-->
+          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+          <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
     </head>
-
     <body>
         <!-- Fixed navbar -->
         <div class="navbar navbar-default navbar-fixed-top">
@@ -47,44 +49,56 @@
                     </button>
                     <a class="navbar-brand" href="/"><b>Uni Bites Logo</b></a>
                 </div>
+
                 <div class="navbar-collapse collapse">
-                       <ul class="nav navbar-nav ">
-                        <li><a href="#">About Us</a></li>
-                        <li class="nav navbar-nav"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Cafes <span class="caret"></span></a>
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="#">About Us</a>
+                        </li>
+                        <li class="nav navbar-nav">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Cafes
+                                <span class="caret"></span>
+                            </a>
                             <ul class="dropdown-menu">
-                                <li><a href="#">An Bialann</a></li>
-                                <li><a href="#">Smokeys</a></li>
-                                <li><a href="#">Sult</a></li>
-                                <li><a href="#">Friars</a></li>
-                                <li><a href="#">Zinc</a></li>
-                                <li><a href="#">Cloud Cafe</a></li>
-                                <li><a href="#">The Wall</a></li>
-                                <li><a href="#">Caife na Gaeilge</a></li>
+                                <li><a href="/cafe/an-bialann">An Bialann</a></li>
+                                <li><a href="/cafe/smokeys">Smokeys</a></li>
+                                <li><a href="/cafe/sult">Sult</a></li>
+                                <li><a href="/cafe/friars">Friars</a></li>
+                                <li><a href="/cafe/zinc">Zinc</a></li>
+                                <li><a href="/cafe/cloud-cafe">Cloud Cafe</a></li>
+                                <li><a href="/cafe/the-wall">The Wall</a></li>
+                                <li><a href="/cafe/caife-na-gaeilge">Caife na Gaeilge</a></li>
+
                             </ul>
                         </li>
-                        <ul class="nav navbar-nav ">
-                            <li><a href="/feed">Write Review</a></li>
-                        </ul>
-
-                        <ul class="nav navbar-nav ">
-                            <li><a href="/users/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-                        </ul>
-                        <ul class="nav navbar-nav navbar-right">
-                            <li><a id="log-out" href="/users/logout"><span class="glyphicon glyphicon-log-out"></span> Log Out</a></li>
-                        </ul>
-                        </div><!--/.nav-collapse -->
-                </div>
+                        <li>
+                            <a href="/feed">Write Review</a>
+                        </li>
+                        <li>
+                            <a href="/login">
+                                <span class="glyphicon glyphicon-log-in"></span>Login
+                            </a>
+                        </li>
+                        <li>
+                            <a id="log-out" href="/users/logout">
+                                <span class="glyphicon glyphicon-log-out"></span>Log Out
+                            </a>
+                        </li>
+                    </ul>
+                </div><!--/.nav-collapse -->
             </div>
-            {{{body}}}
+        </div>
 
+        {{{body}}}
 
-            <!-- Bootstrap core JavaScript
-================================================== -->
-            <!-- Placed at the end of the document so the pages load faster -->
-            <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-            <script src="javascripts/bootstrap.min.js"></script>
-            <script src="javascripts/feed.js"></script>
-            <script src="javascripts/auth.js"></script>
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script src="/javascripts/bootstrap.min.js"></script>
+        <script src="/javascripts/feed.js"></script>
+        <script src="/javascripts/login.js"></script>
+        <script src="/javascripts/register.js"></script>
 
-            </body>
-        </html>
+    </body>
+</html>

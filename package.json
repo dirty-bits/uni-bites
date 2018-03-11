@@ -15,7 +15,7 @@
     "lint:client": "eslint -c eslintrc.client.json --fix-dry-run --ignore-pattern '*.min.js' public/javascripts/*.js",
     "lint:server": "eslint -c eslintrc.server.json --fix-dry-run  specs/*.js models/*.js routes/*.js data/*.js bin/www ./*.js",
 
-    "lint:reports": "eslint --no-color -o eslint.report.client.txt -c eslintrc.client.json --fix-dry-run --ignore-pattern '*.min.js' public/javascripts/*.js;eslint --no-color -o eslint.report.server.txt -c eslintrc.server.json specs/*.js models/*.js routes/*.js data/*.js bin/www ./*.js; echo 'reports written to eslint.client.report.txt and eslint.server.report.txt'"
+    "lint:reports": "eslint --no-color -o eslint.report.client.txt -c eslintrc.client.json --fix-dry-run --ignore-pattern '*.min.js' public/javascripts/*.js;eslint --no-color -o eslint.report.server.txt -c eslintrc.server.json specs/*.js models/*.js routes/*.js data/*.js bin/www ./*.js;echo $'\nReports written to: \n * eslint.report.client.txt\n * eslint.report.server.txt'"
   },
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",

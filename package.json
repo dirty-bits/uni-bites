@@ -10,7 +10,12 @@
     "test:once": "webdriver-manager update",
     "test:web-driver": "./node_modules/.bin/webdriver-manager start",
     "test:servers": "concurrently \"npm start\" \"npm run test:web-driver\"",
-    "lint": "eslint public/javascripts/*.js specs/*.js models/*.js routes/*.js models/*.js data/*.js bin/www  ./*.js"
+
+    "lint": "npm run lint:client; npm run lint:server",
+    "lint:client": "eslint -c eslintrc.client.json --fix-dry-run --ignore-pattern '*.min.js' public/javascripts/*.js",
+    "lint:server": "eslint -c eslintrc.server.json --fix-dry-run  specs/*.js models/*.js routes/*.js data/*.js bin/www ./*.js",
+
+    "lint:reports": "eslint --no-color -o eslint.report.client.txt -c eslintrc.client.json --fix-dry-run --ignore-pattern '*.min.js' public/javascripts/*.js;eslint --no-color -o eslint.report.server.txt -c eslintrc.server.json specs/*.js models/*.js routes/*.js data/*.js bin/www ./*.js; echo 'reports written to eslint.client.report.txt and eslint.server.report.txt'"
   },
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
@@ -31,6 +36,7 @@
     "concurrently": "^3.5.1",
     "eslint": "^4.18.2",
     "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-config-google": "^0.9.1",
     "eslint-plugin-import": "^2.9.0",
     "jasmine": "^3.0.0",
     "mocha": "^5.0.1",

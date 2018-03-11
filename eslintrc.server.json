@@ -8,8 +8,10 @@
             "impliedStrict": true
         }
     },
+
     "rules": {
         "curly": "warn",
+
         "eqeqeq": "warn",
         "array-bracket-newline": "off",
         "no-unused-vars": ["error", {"vars": "all", "args": "after-used", "ignoreRestSiblings": false}],
@@ -33,14 +35,14 @@
         "lines-around-comment": ["error", {"beforeBlockComment": true, "beforeLineComment": true, "allowClassStart": true, "allowClassEnd": false, "allowBlockStart": true, "allowBlockEnd": false}],
         "keyword-spacing": ["error", {"after": false}],
         "key-spacing": ["error", {"beforeColon": false, "afterColon": true}],
-        "indent": ["error", "tab", {"ignoreComments": false, "VariableDeclarator": 4}],
+        "indent": ["error", 4, {"ignoreComments": false, "VariableDeclarator": 1}],
         "function-paren-newline": ["error", "never"],
         "func-call-spacing": ["error", "never"],
         "eol-last": ["error", "never"],
         "comma-style": ["error", "last"],
         "comma-spacing": ["error", {"before": false, "after": true}],
         "comma-dangle": ["error", "never", {"functions": "never"}],
-        "camel-case": ["error", {"properties": "always"}],
+        
         "brace-style": ["error", "1tbs", {"allowSingleLine": false}],
         "array-element-newline": ["error", {"multiline": true}],
         "global-require": "error",
@@ -48,6 +50,7 @@
         "arrow-spacing": ["error", {"before": true, "after": true}],
         "no-var": "error",
         "quotes": ["error", "single"]
+
     }
 
 }

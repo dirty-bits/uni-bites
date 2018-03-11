@@ -1,6 +1,12 @@
 {
     "extends": "airbnb-base",
 
+    "env":{
+        "node": true,
+        "jasmine": true,
+        "protractor": true
+    },
+
     "parserOptions": {
         "ecmaVersion": 9,
         "sourceType": "script",

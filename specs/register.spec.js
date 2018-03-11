@@ -26,15 +26,23 @@ describe('uni-bites user registration', function() {
     btnSubmit = element(by.css("button[type='submit']"));
   });
 
-  var removeUser = false;
-  afterEach(function(){
-    // this is a better place to have db tidyup code, but there should not be any need 
-    // to run it when it is not necessary (database has not been updated);
+  // var removeUser = false;
+  // afterEach(function(){
+  //   // this is a better place to have db tidyup code, but there should not be any need 
+  //   // to run it when it is not necessary (database has not been updated);
     
-    // remove user created
-    if(removeUser){
-      User.findOneAndRemove({'user_name':browser.params.registerUser.name}).exec();
-    }
+  //   // remove user created
+  //   if(removeUser){
+  //     User.findOneAndRemove({'user_name':browser.params.registerUser.name}).exec();
+  //   }
+  // });
+
+  afterAll(function(){
+    // Remove the test user.. this is a bit odd here as the test user could only be created 
+    // once but if there is a need for the user to be removed after several individual test
+    // we are reverting to the previous code.. setting a boolean parameter after the test  
+    // and checking for that after each test.. (that is pobably better but the code is ugly)
+    User.findOneAndRemove({'user_name':browser.params.registerUser.name}).exec();
   });
 
   it('should have the correct title', function(){
@@ -93,7 +101,5 @@ describe('uni-bites user registration', function() {
 
     // todo: wait for page to change
     expect(browser.getCurrentUrl()).toContain("/feed");
-
-    removeUser = true;
   });
 });

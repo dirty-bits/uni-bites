@@ -5,11 +5,11 @@
 .navigation {
     padding: 30px;
     background-color: transparent;
-    transition: background-color 0.5s ease-in-out;
-    -webkit-transition: background-color 0.5s ease-in-out;
-    -moz-transition: background-color 0.5s ease-in-out;
-    -o-transition: background-color 0.5s ease-in-out;
-    -ms-transition: background-color 0.5s ease-in-out;
+    transition: background-color 1s ease-in-out;
+    -webkit-transition: background-color 1s ease-in-out;
+    -moz-transition: background-color 1s ease-in-out;
+    -o-transition: background-color 1s ease-in-out;
+    -ms-transition: background-color 1s ease-in-out;
 }
 
 .navigation.alt-color {

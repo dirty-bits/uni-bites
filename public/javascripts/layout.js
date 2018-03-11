@@ -4,7 +4,7 @@ jQuery(document).ready(function($) {
     var navbar = $('.navigation');
     var button = $('.specialButton');
 
-    if (scrollPos > 200) {
+    if (scrollPos > 500) {
       navbar.addClass('alt-color');
       button.addClass('alt-border')
     } else {

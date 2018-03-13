@@ -1,0 +1,84 @@
+@startuml
+' uncomment the line below if you're using computer with a retina display
+' skinparam dpi 300
+!define Table(name,desc) class name as "desc" << (T,#FFAAAA) >>
+' we use bold for primary key
+' green color for unique
+' and underscore for not_null
+!define primary_key(x) <b>x</b>
+!define unique(x) <color:green>x</color>
+!define not_null(x) <u>x</u>
+' other tags available:
+' <i></i>
+' <back:COLOR></color>, where color is a color name or html color code
+' (#FFAACC)
+' see: http://plantuml.com/classes.html#More
+
+hide methods
+hide stereotypes
+
+skinparam monochrome true
+
+Table(user, "user") {
+primary_key(id) INTEGER
+not_null(unique(email)) VARCHAR[255]
+not_null(password_hash) VARCHAR[255]
+date_created DATETIME
+fb_id VARCHAR[255]
+access_token VARCHAR[255]
+}
+
+Table(cafe, "cafe") {
+primary_key(id) INTEGER
+not_null(unique(cafe_name)) VARCHAR[32]
+location VARCHAR[255]
+not_null(main_image_id) INTEGER
+}
+
+Table(cafe_image, "cafe_image") {
+primary_key(id) INTEGER
+not_null(cafe_id) INTEGER
+not_null(image_id) INTEGER
+}
+
+Table(cafe_rating, "cafe_rating") {
+primary_key(id) INTEGER
+not_null(cafe_id) INTEGER
+not_null(user_id) INTEGER
+rating SMALLINT
+comment VARCHAR[255]
+}
+
+Table(item, "item") {
+primary_key(id) INTEGER
+name VARCHAR[255]
+not_null(image_id) INTEGER
+}
+
+Table(image, "image") {
+primary_key(id) INTEGER
+name VARCHAR[255]
+tags VARCHAR[255]
+image_main_url VARCHAR[255]
+image_thumbnail_url VARCHAR[255]
+}
+
+Table(priced_item, "priced_item") {
+primary_key(id) INTEGER
+not_null(cafe_id) INTEGER
+not_null(item_id) INTEGER
+price DOUBLE
+}
+
+' One to One relationships --
+cafe_image "1" -- "1" image
+item "1" -- "1" image
+
+' One to Many relationships --> 
+item "1" --> "*" priced_item
+cafe "1" --> "*" priced_item
+cafe "1" --> "*" cafe_rating
+cafe "1" --> "*" cafe_image
+user "1" --> "*" cafe_rating
+
+@enduml

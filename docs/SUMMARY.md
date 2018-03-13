@@ -3,22 +3,31 @@
 
 # Summary
 * [Project Structure](ProjectStructure/README.md)
+    * [Object Model](ProjectStructure/object-model.md)
+    * [Templates](ProjectStructure/template.md)
     * [Layouts](ProjectStructure/layout.md)
-    * [Partials](ProjectStructure/partial.md)
     * [Content Section](ProjectStructure/content-section.md)
+    * [Partials](ProjectStructure/partial.md)
+    * [Documentation](ProjectStructure/documentation.md)
 * [Technologies](Technologies/README.md)
+<!--
     * [ExpressJS](Technologies/expressjs.md)
     * [Handlebars](Technologies/handlebars.md)    
     * [MongoDB](Technologies/mongodb.md)
     * [Javascript](Technologies/javascript.md)
+-->
 * [SourceControl](SourceControl/README.md)
 * [UiTesting](UiTesting/README.md)
+<!--
     * [Jasmine](UiTesting/jasmine.md)
     * [Protractor](UiTesting/protractor.md)
+-->
 * [Tasks](Tasks/README.md)
+<!--
     * [Commit to Git](Tasks/git-commit.md)
     * [Creating a Feature Branch](Tasks/git-create-feature-branch.md)
     * [Create Page](Tasks/create-page.md)
     * [Ui Test](Tasks/ui-test.md)
     * [Running a Server](Tasks/live-server.md)
     * [Website Golive](Tasks/website-golive.md)
+-->

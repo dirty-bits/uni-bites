@@ -1,1 +1,3 @@
 # Handlebars
+
+## Variables and syntax

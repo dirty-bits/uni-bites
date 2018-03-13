@@ -1,4 +1,4 @@
 {
     "root": "./",
-    "plugins": ["collapsible-menu"]
+    "plugins": ["collapsible-menu", "plantuml-svg"]
 }

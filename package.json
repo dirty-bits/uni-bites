@@ -11,9 +11,11 @@
     "test:web-driver": "./node_modules/.bin/webdriver-manager start",
     "test:servers": "concurrently \"npm start\" \"npm run test:web-driver\"",
     "lint": "eslint --fix-dry-run",
-
     "docs": "gitbook serve docs",
-    "docs:once": "gitbook install docs"
+    "docs:build": "gitbook build docs",
+    "docs:once": "gitbook install docs",
+    "once": "npm run test:once; npm run docs:once",
+    "cmd": ":;"
   },
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",

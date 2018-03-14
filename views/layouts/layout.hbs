@@ -22,7 +22,7 @@
         <link href="/stylesheets/font.css" rel="stylesheet">
         <link href="/stylesheets/sharedComponents.css" rel="stylesheet">
 
-        {{{block "pageScripts"}}}
+        {{{block "pageStyles"}}}
 
         <!-- Font Awesome -->
         <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
@@ -72,15 +72,9 @@
                                 <span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu">
-
-                                <li><a href="#">An Bialann</a></li>
-                                <li><a href="/cafe">Smokeys</a></li>
-                                <li><a href="#">Sult</a></li>
-                                <li><a href="#">Friars</a></li>
-                                <li><a href="#">Zinc</a></li>
-                                <li><a href="#">Cloud Cafe</a></li>
-                                <li><a href="#">The Wall</a></li>
-                                <li><a href="#">Caife na Gaeilge</a></li>
+                                {{#each cafes}}
+                                    <li><a href="/cafe/{{urlTag}}">{{name}}</a></li>
+                                {{/each}}
                             </ul>
                         </li>
                         <li>
@@ -88,7 +82,7 @@
                         </li>
                         <li class="specialButton">
                             <a href="/login">Login/Register</a>
-                        </li>                  
+                        </li>
                     </ul>
                 </div><!--/.nav-collapse -->
             </div>

@@ -1,7 +1,7 @@
 var mongoose = require("mongoose");
 var connection = null;
 
-var mongodbConnectionString = "mongodb://#MongoDbUser#:#MongoDbPassword#@#MongoDbServer#:#MongoDbPort#/#MongoDbSchema#";
+var mongodbConnectionString = "mongodb://mongodb3197fa:ny3pip@danu7.it.nuigalway.ie:8717/mongodb3197";
 
 if (!mongoose.connection.db) {
     connection = mongoose.connect(mongodbConnectionString, function(err) {
@@ -11,6 +11,9 @@ if (!mongoose.connection.db) {
             return;
         } else {
             console.log("connected to database...... ");
+            require('./user');
+            require('./image');
+            require('./cafe');
         }
     });
 }

@@ -8,7 +8,8 @@ router.get('/', function(req, res, next) {
 	res.render('login', { title: 'uni-bites - Login' });
 });
 
-
+// TODO: This is an api call, used from javascript, here it looks like the
+//       postback call from the login form, move into a non-rest api section
 router.post('/', function(req, res, next) {
     console.log("POST: Login. \n%s	 ", JSON.stringify (req.body));
 

@@ -43,6 +43,9 @@ ul.nav a:hover {
     background-color: #2D9CDB !important;
     padding-bottom: 20px;
 }
+.drop:hover {
+    padding-bottom: 0px !important;
+}
 
 .brand {
     padding: 0px 0px;

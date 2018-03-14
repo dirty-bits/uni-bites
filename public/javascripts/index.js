@@ -21,3 +21,8 @@ var searchTerm = $(this).val().toLowerCase();
 });
 
 });
+
+$('.dropdown-menu li a').on('click',function() {
+    var selectedValue = $(this).val();
+  $('.live-search-box').val($(this).text())
+});

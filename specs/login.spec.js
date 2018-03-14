@@ -1,13 +1,14 @@
 // spec.js
 describe('uni-bites login tests', function() {
-  var until = protractor.ExpectedConditions;
+  // var until = protractor.ExpectedConditions;protractor.ExpectedConditions.
   var txtEmail;
   var txtPassword;
   var btnSubmit;
+  var errorMessage;
 
   beforeEach(function(){
     browser.waitForAngularEnabled(false);
-    browser.get(browser.params.baseUrl + '/login'); // rework to page pattern see : http://blog.scottlogic.com/2015/11/06/ProtractorForBeginnersPart1.html
+    browser.get(browser.params.baseUrl + '/login'); // TODO: rework to page pattern see : http://blog.scottlogic.com/2015/11/06/ProtractorForBeginnersPart1.html
 
     txtEmail = element(by.id("inputEmail"));
     txtPassword = element(by.id("inputPassword"));

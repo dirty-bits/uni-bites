@@ -4,6 +4,8 @@ var cafe = require('../models/cafe');
 require('./util');
 
 var itemSchema = new Schema({
-    name: String,
-    seller:
+    name:  {type: String},
+    seller:  {type: String}
 });
+
+module.exports = mongoose.model('unibites-items', itemSchema);

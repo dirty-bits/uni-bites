@@ -7,11 +7,11 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'uni-bites' });
 });
 
-
-/* GET login page. */
+/* GET login page.
 router.get('/login', function(req, res, next) {
   res.render('login', { title: 'uni-bites' });
 });
+*/
 
 /* GET feed page. */
 router.get('/feed', function(req, res, next) {
@@ -49,6 +49,7 @@ router.get('/getComments', function(req, res, next) {
         res.json(comments);
     })
 });
+
 
 
 module.exports = router;

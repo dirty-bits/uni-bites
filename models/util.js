@@ -3,17 +3,15 @@ var connection = null;
 
 var mongodbConnectionString = "mongodb://#MongoDbUser#:#MongoDbPassword#@#MongoDbServer#:#MongoDbPort#/#MongoDbSchema#";
 
-console.log(mongoose.connection.db);
-
 if (!mongoose.connection.db) {
     connection = mongoose.connect(mongodbConnectionString, function(err) {
 
         if(err) {
             console.error("Error connecting to mongoDB: %d", JSON.stringify(err));
+            return;
         } else {
             console.log("connected to database...... ");
         }
-        console.log("connected to database: danu7.it.nuigalway.ie");
     });
 }
 

@@ -1,0 +1,56 @@
+.bg{
+    background-image: url("../images/background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+#heading{
+    font-family: roboto;
+    font-size: 48px;
+    font-weight: bold;
+}
+
+/* '.title' is for the menu, review and opening hours */
+.title{
+    font-family: roboto;
+    font-size: 36px;
+    padding-top: 35px;
+}
+
+.menu-body {
+    padding-top: 10px;
+    
+}
+ 
+.menu-section {
+  margin-bottom: 10px; 
+}
+ 
+.menu-section-title {
+  font-family: roboto;
+  font-size: 30px;
+  display: block;
+  font-weight:normal;
+  margin: 20px 0; 
+}
+ 
+.menu-item {
+  font-family: roboto;
+  margin: 24px 0;
+  font-size: 18px;
+}
+ 
+.menu-item-name{
+  font-family: lato;
+  font-weight: bold;
+  border-bottom: 2px dotted;
+}
+ 
+.menu-item-price{
+  float: right;
+  font-weight: bold;
+  font-family: lato;
+  margin-top: -22px;
+}

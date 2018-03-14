@@ -3,14 +3,17 @@ var router = express.Router();
 var jwt = require('jsonwebtoken');
 var User = require('../models/user');
 
-router.get('/register', function(req, res, next) {
-    res.render("register", {title:"uni-bites - Register"});
+router.get('/', function(req, res, next) {
+    res.render("register", {title:"uni-bites - Register" });
 });
 
-router.post('/users/register', function(req, res, next) {
+// TODO: This is an api call, used from javascript, here it looks like the
+//       postback call from the register form, move into a non-rest api section
+router.post('/', function(req, res, next) {
     var email = req.body.email;
     var password = req.body.password;
     var full_name = req.body.full_name;
+    
     // Check if account already exists
     User.findOne({ 'email' : email }, function(err, user) {
         if (err)

@@ -18,16 +18,13 @@
 
         <!-- Custom styles for this template -->
         <link href="/stylesheets/main.css" rel="stylesheet">
-
         <link href="/stylesheets/navbar.css" rel="stylesheet">
-        <link href="/stylesheets/index.css" rel="stylesheet">
-        <link href="/stylesheets/login.css" rel="stylesheet">
-        <link href="/stylesheets/register.css" rel="stylesheet">
         <link href="/stylesheets/font.css" rel="stylesheet">
         <link href="/stylesheets/sharedComponents.css" rel="stylesheet">
-        <link href="/stylesheets/cafe.css" rel="stylesheet">
 
-        <!-- Fonts Awesome -->
+        {{{block "pageStyles"}}}
+
+        <!-- Font Awesome -->
         <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
 
         <!-- Sweet Alert -->
@@ -93,15 +90,15 @@
 
         {{{body}}}
 
+        {{> footer}}
+
         <!-- Bootstrap core JavaScript
         ================================================== -->
         <!-- Placed at the end of the document so the pages load faster -->
         <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
         <script src="/javascripts/bootstrap.min.js"></script>
-        <script src="/javascripts/feed.js"></script>
-        <script src="/javascripts/login.js"></script>
-        <script src="/javascripts/register.js"></script>
-        <script src="/javascripts/index.js"></script>
         <script src="/javascripts/layout.js"></script>
+
+        {{{block "pageScripts"}}}
     </body>
 </html>

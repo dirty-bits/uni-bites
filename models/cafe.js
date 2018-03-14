@@ -1,16 +1,15 @@
 var mongoose = require('mongoose');
 var bcrypt = require('bcrypt-nodejs');
-var imageSchema = mongoose.model('unibites-images').schema;
-var commentSchema = mongoose.model('unibites-comments').schema;
+var imageSchema = require('./image').schema;
 var Schema = mongoose.Schema;
 
 require('./util');
+console.log(JSON.stringify(imageSchema));
 
 var cafeSchema = new mongoose.Schema({
     name:  {type: String},
     location:  {type: String},
-    images: [imageSchema],
-    comments: [commentSchema]
+    images: [imageSchema]
 });
 
 module.exports =  mongoose.model('unibites-cafes', cafeSchema);

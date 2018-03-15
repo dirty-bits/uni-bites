@@ -1,24 +1,21 @@
+const mongoose = require('mongoose');
+const commentData = require('./comments');
+const userData = require('./users');
+const mongodbConnection = require('../models/util.js');
 
-var mongoose = require('mongoose');
-var commentData = require('./comments');
-var userData = require('./users');
-var mongodbConnection = require('../models/util.js');
+console.log('Attempting to populate the database.. ');
 
-console.log("Attempting to populate the database.. ");
-
-// this could fail when there are more complex dependencies between the documents
-commentData.populateDB().then(
-    function(){
-        userData.populateDB();
-    }
-).finally(function (){
-    // close database
+//this could fail when there are more complex dependencies between the documents
+commentData.populateDB().then(() => {
+    userData.populateDB();
+}).finally(() => {
+    //close database
 });
 
 /*
     try
     {
-        // should be promise based.. 
+        // should be promise based..
 
     }
     finally

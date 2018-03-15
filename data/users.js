@@ -1,77 +1,71 @@
+const mongoose = require('mongoose');
+const User = require('../models/user.js');
 
-var mongoose = require('mongoose');
-var User = require('../models/user.js');
+const populateDB = function () {
+    console.log('[Users]');
 
-var populateDB = function(){
-  console.log("[Users]");
-
-  return new Promise(
-      function(resolve, reject) {
-            removeExisting()
-            .then(function(){
+    return new Promise(((resolve, reject) => {
+        removeExisting()
+            .then(() => {
                 addData();
                 resolve();
             })
-            .error(function(reason){
+            .error((reason) => {
                 reject();
             });
-      }
-    );
-}
+    }));
+};
 
-var removeExisting = function() {
-  return new Promise(function(resolve, reject) {
-    User.find().count(function(err, count){
-        if(err){
-            reject(new Error(err));
-            return;
-        }
-        
-        console.log("Removing %d users..", count)
-
-        User.find().remove(function(err){
-            if(err)
+var removeExisting = function () {
+    return new Promise(((resolve, reject) => {
+        User.find().count((err, count) => {
+            if(err) {
                 reject(new Error(err));
+                return;
+            }
+        
+            console.log('Removing %d users..', count);
 
-            console.log("%d Users removed.. ", count);
-            resolve(count);
-        });
-    });
-  });
-}
+            User.find().remove((err) => {
+                if(err) {
+                    reject(new Error(err));
+                }
 
-var addData = function()
-{
-    return new Promise(function(resolve, reject) {
-        try
-        {
-            var admin = new User({
-                email:'admin'
+                console.log('%d Users removed.. ', count);
+                resolve(count);
             });
-            admin.password_hash = admin.generateHash("admin");
+        });
+    }));
+};
+
+var addData = function () {
+    return new Promise(((resolve, reject) => {
+        try{
+            const admin = new User({
+                email: 'admin'
+            });
+            admin.password_hash = admin.generateHash('admin');
             admin.save();
 
-            var cafe = new User({
-                email:'cafe', 
+            const cafe = new User({
+                email: 'cafe'
             });
-            cafe.password_hash = admin.generateHash("cafe");
+            cafe.password_hash = admin.generateHash('cafe');
             cafe.save();
 
-            var test = new User({
-                email:'test', 
+            const test = new User({
+                email: 'test'
             });
-            test.password_hash = test.generateHash("test");
+            test.password_hash = test.generateHash('test');
             test.save();
 
-            console.log("Added new Users to mongodb");
+            console.log('Added new Users to mongodb');
             resolve();
-        }
-        catch(exception)
-        {
-            console.log("Error added users to mongodb: %s", exception);
+        } catch(exception) {
+            console.log('Error added users to mongodb: %s', exception);
             reject(exception);
         }
-    });
-}
+    }));
+};
 
 exports.populateDB = populateDB;

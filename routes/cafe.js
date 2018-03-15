@@ -1,27 +1,29 @@
-var express = require('express');
-var router = express.Router();
-var User = require('../models/cafe');
+const express = require('express');
 
-/* GET cafe page. */
-router.get('/:cafename', function(req, res, next) {
+const router = express.Router();
+const User = require('../models/cafe');
 
+/*GET cafe page. */
+router.get('/:cafename', (req, res, next) => {
     console.log(req.params.cafename);
 
-    var cafeTag = req.params.cafename;
-    var cafeTitle = "";
-    var cafe = "";
+    const cafeTag = req.params.cafename;
+    let cafeTitle = '';
+    const cafe = '';
 
-    var cafes = req.app.locals.cafes;
+    const cafes = req.app.locals.cafes;
 
-    for(var i = 0; i < cafes.length; i++) {
+    for(let i = 0; i < cafes.length; i++) {
         if(cafes[i].urlTag == cafeTag) {
             cafeTitle = cafes[i].name;
             break;
         }
     }
 
-	res.render('cafe', { title: cafeTitle + " | Uni-Bites", cafe: cafeTitle});
+    res.render('cafe', {
+        title: `${cafeTitle} | Uni-Bites`,
+        cafe: cafeTitle
+    });
 });
-
 
 module.exports = router;

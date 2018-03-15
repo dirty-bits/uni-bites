@@ -1,9 +1,10 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
 
-/* GET privacy policy page. */
-router.get('/', function(req, res, next) {
-	res.render('privacy-policy', { title: 'Privacy Policy' });
+const router = express.Router();
+
+/*GET privacy policy page. */
+router.get('/', (req, res, next) => {
+    res.render('privacy-policy', { title: 'Privacy Policy' });
 });
 
 module.exports = router;

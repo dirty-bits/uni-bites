@@ -1,16 +1,15 @@
-var mongoose = require("mongoose");
-var connection = null;
+const mongoose = require('mongoose');
+
+let connection = null;
 
 var mongodbConnectionString = "mongodb://#MongoDbUser#:#MongoDbPassword#@#MongoDbServer#:#MongoDbPort#/#MongoDbSchema#";
 
-if (!mongoose.connection.db) {
-    connection = mongoose.connect(mongodbConnectionString, function(err) {
-
+if(!mongoose.connection.db) {
+    connection = mongoose.connect(mongodbConnectionString, (err) => {
         if(err) {
-            console.error("Error connecting to mongoDB: %d", JSON.stringify(err));
-            return;
-        } else {
-            console.log("connected to database...... ");
+            console.error('Error connecting to mongoDB: %d', JSON.stringify(err));
+        } else{
+            console.log('connected to database...... ');
         }
     });
 }

@@ -4,12 +4,12 @@ jQuery(document).ready(($) => {
         const navbar = $('.navigation');
         const button = $('.specialButton');
 
-        if(scrollPos > 500) {
-            navbar.addClass('alt-color');
-            button.addClass('alt-border');
-        } else{
-            navbar.removeClass('alt-color');
-            button.removeClass('alt-border');
-        }
-    });
+    if (scrollPos > 50) {
+      navbar.addClass('alt-color');
+      button.addClass('alt-border')
+    } else {
+      navbar.removeClass('alt-color');
+      button.removeClass('alt-border');
+    }
+  });
 });

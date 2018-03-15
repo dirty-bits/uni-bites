@@ -1,7 +1,7 @@
 var mongoose = require("mongoose");
 var connection = null;
 
-var mongodbConnectionString = "mongodb://#MongoDbUser#:#MongoDbPassword#@#MongoDbServer#:#MongoDbPort#/#MongoDbSchema#";
+var mongodbConnectionString = "mongodb://localhost:27017/uni-bitesDB";
 
 if (!mongoose.connection.db) {
     connection = mongoose.connect(mongodbConnectionString, function(err) {

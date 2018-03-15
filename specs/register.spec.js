@@ -15,7 +15,7 @@ describe('uni-bites user registration', function() {
     browser.waitForAngularEnabled(false);
     browser.get(browser.params.baseUrl + '/register'); // rework to page pattern see : http://blog.scottlogic.com/2015/11/06/ProtractorForBeginnersPart1.html
 
-      
+
     txtFullName = element(by.id("inputFullName"));
     txtEmail = element(by.id("inputEmail"));
     txtPassword = element(by.id("inputPassword"));
@@ -28,9 +28,9 @@ describe('uni-bites user registration', function() {
 
   // var removeUser = false;
   // afterEach(function(){
-  //   // this is a better place to have db tidyup code, but there should not be any need 
+  //   // this is a better place to have db tidyup code, but there should not be any need
   //   // to run it when it is not necessary (database has not been updated);
-    
+
   //   // remove user created
   //   if(removeUser){
   //     User.findOneAndRemove({'user_name':browser.params.registerUser.name}).exec();
@@ -38,11 +38,11 @@ describe('uni-bites user registration', function() {
   // });
 
   afterAll(function(){
-    // Remove the test user.. this is a bit odd here as the test user could only be created 
+    // Remove the test user.. this is a bit odd here as the test user could only be created
     // once but if there is a need for the user to be removed after several individual test
-    // we are reverting to the previous code.. setting a boolean parameter after the test  
+    // we are reverting to the previous code.. setting a boolean parameter after the test
     // and checking for that after each test.. (that is pobably better but the code is ugly)
-    User.findOneAndRemove({'user_name':browser.params.registerUser.name}).exec();
+    User.findOneAndRemove({'email':browser.params.registerUser.email}).exec();
   });
 
   it('should have the correct title', function(){
@@ -54,7 +54,7 @@ describe('uni-bites user registration', function() {
 
     btnSubmit.click();
     browser.sleep(500);// <-- really really bad remove later by waiting for the div:
-    // <div class="swal2-container swal2-center swal2-fade swal2-shown"> 
+    // <div class="swal2-container swal2-center swal2-fade swal2-shown">
     // to become invisible
 
     expect(errorMessage.getText()).toContain("Please enter a full name.");
@@ -66,7 +66,7 @@ describe('uni-bites user registration', function() {
 
     btnSubmit.click();
     browser.sleep(500);// <-- really really bad remove later by waiting for the div:
-    // <div class="swal2-container swal2-center swal2-fade swal2-shown"> 
+    // <div class="swal2-container swal2-center swal2-fade swal2-shown">
     // to become invisible
 
     expect(errorMessage.getText()).toContain("Please enter an email.");
@@ -81,7 +81,7 @@ describe('uni-bites user registration', function() {
 
     btnSubmit.click();
     browser.sleep(500);// <-- really really bad remove later by waiting for the div:
-    // <div class="swal2-container swal2-center swal2-fade swal2-shown"> 
+    // <div class="swal2-container swal2-center swal2-fade swal2-shown">
     // to become invisible
 
     expect(errorMessage.getText()).toContain("Password and password confirmation do not match.");

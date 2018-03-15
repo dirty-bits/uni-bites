@@ -1,7 +1,7 @@
 exports.config = {
   framework: 'jasmine',
   seleniumAddress: 'http://localhost:4444/wd/hub',
-  specs: ['*.spec.js'],    // '*.spec.js' 
+  specs: ['*.spec.js'],    // '*.spec.js'
   capabilities: {
     browserName: 'chrome' // manually change to chrome, android, ios etc.. for testing sessions
   },

@@ -1,8 +1,8 @@
-jQuery(document).ready(function($) {
-  $(window).scroll(function() {
-    var scrollPos = $(window).scrollTop();
-    var navbar = $('.navigation');
-    var button = $('.specialButton');
+jQuery(document).ready(($) => {
+    $(window).scroll(() => {
+        const scrollPos = $(window).scrollTop();
+        const navbar = $('.navigation');
+        const button = $('.specialButton');
 
     if (scrollPos > 50) {
       navbar.addClass('alt-color');

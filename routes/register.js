@@ -33,6 +33,7 @@ router.post('/', function(req, res, next) {
             // If there is no user with that username create the user
             var newUser = new User();
             // set the user's local credentials
+            newUser.email = email;
             newUser.full_name = full_name;
             newUser.password_hash = newUser.generateHash(password);
             newUser.access_token = createJwt({email:email});

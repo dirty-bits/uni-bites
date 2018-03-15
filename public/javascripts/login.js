@@ -21,7 +21,7 @@ $(document).ready( function() {
             url: '/login',
             dataType: 'json',
             data: {
-                'user_name': email,
+                'email': email,
                 'password': password
             },
             success: function(token){

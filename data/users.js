@@ -45,15 +45,23 @@ var addData = function()
     return new Promise(function(resolve, reject) {
         try
         {
-            new User({
-                user_name:'Admin', 
-                password_hash:''
-            }).save();
+            var admin = new User({
+                email:'admin'
+            });
+            admin.password_hash = admin.generateHash("admin");
+            admin.save();
 
-            new User({
-                user_name:'Cafe Owner', 
-                password_hash:''
-            }).save();
+            var cafe = new User({
+                email:'cafe', 
+            });
+            cafe.password_hash = admin.generateHash("cafe");
+            cafe.save();
+
+            var test = new User({
+                email:'test', 
+            });
+            test.password_hash = test.generateHash("test");
+            test.save();
 
             console.log("Added new Users to mongodb");
             resolve();

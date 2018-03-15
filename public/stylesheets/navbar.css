@@ -29,11 +29,6 @@
     border-radius: 5px;
     font-weight: 700;
     margin-bottom: 40px;
-    transition: border 1s ease-in-out;
-    -webkit-transition: border 1s ease-in-out;
-    -moz-transition: border 1s ease-in-out;
-    -o-transition: border 1s ease-in-out;
-    -ms-transition: border 1s ease-in-out;
 }
 
 .specialButton.alt-border {
@@ -44,13 +39,18 @@
     border: 3px solid #2D9CDB;
 }
 
+/*
 ul.nav a:hover {
     background-color: #2D9CDB !important;
+    padding-bottom: 20px;
 }
+*/
 
+/*
 .drop:hover {
     padding-bottom: 0px !important;
 }
+*/
 
 .brand {
     padding: 0px 0px;

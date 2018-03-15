@@ -71,10 +71,12 @@
 .alignText {
     padding: 0px 0px 0px 10px;
 }
-.dropdown-menu {
+
+.searchDrop {
     left: -440px;
     min-width: 342px;
 }
+
 .dropdown-menu a:hover {
     background-color: #2D9CDB !important;
 }

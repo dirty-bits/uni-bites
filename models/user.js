@@ -9,13 +9,19 @@ const usersSchema = new Schema({
     full_name: { type: String },
     email: { type: String },
     password_hash: { type: String },
-    date_created: {type: Date, default: new Date()},
-    fb_id: { type: String, default: null },
+    date_created: {
+        type: Date,
+        default: new Date()
+    },
+    fb_id: {
+        type: String,
+        default: null
+    },
     access_token: { type: String }
 });
 
-usersSchema.pre('save', function (next) {
-    // object validation should go in these handlers
+usersSchema.pre('save', (next) => {
+    //object validation should go in these handlers
     next();
 });
 

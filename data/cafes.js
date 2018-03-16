@@ -36,18 +36,18 @@ const cafes = [
     }
 ];
 
-function add_cafes () {
+function add_cafes() {
     console.log('[Cafes]');
 
-    // clear out entries
+    //clear out entries
     Cafe.deleteMany({}).exec();
 
-    for( var i = 0; i < cafes.length; i++ ) {
+    for(let i = 0; i < cafes.length; i++) {
         console.log(`    * ${cafes[i].name}`);
         new Cafe(cafes[i]).save();
     }
 
     console.log();
-};
+}
 
-module.exports = add_cafes
+module.exports = add_cafes;

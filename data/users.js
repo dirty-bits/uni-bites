@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const User = require('../models/user.js');
 
-function add_users () {
+function add_users() {
     console.log('[Users]');
 
     User.deleteMany({}).exec();
@@ -26,6 +26,6 @@ function add_users () {
     test.password_hash = test.generateHash('test');
     test.save();
     console.log('   * test\n');
-};
+}
 
-module.exports = add_users
+module.exports = add_users;

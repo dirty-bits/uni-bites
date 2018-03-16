@@ -1,6 +1,6 @@
 //spec.js
 //var mongoose = require('mongoose');
-const User = require('../models/user');
+const User = require('../../models/user');
 
 describe('uni-bites user registration', () => {
     //var until = protractor.ExpectedConditions;

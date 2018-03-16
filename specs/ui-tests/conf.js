@@ -3,7 +3,7 @@ exports.config = {
     seleniumAddress: 'http://localhost:4444/wd/hub',
     specs: ['*.spec.js'], //'*.spec.js'
     capabilities: {
-        browserName: 'chrome' //manually change to chrome, android, ios etc.. for testing sessions
+        browserName: 'firefox' //manually change to chrome, android, ios etc.. for testing sessions
     },
     stackTrace: false,
 

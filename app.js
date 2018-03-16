@@ -7,7 +7,7 @@ const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 
-// Routes
+//Routes
 const cafeAPI = require('./routes/api');
 const index = require('./routes/index');
 const users = require('./routes/users');
@@ -20,7 +20,7 @@ const privacyPolicy = require('./routes/privacy-policy');
 const aboutUs = require('./routes/about-us');
 const careers = require('./routes/careers');
 
-// Model Classes
+//Model Classes
 const Cafe = require('./models/cafe');
 
 //Use `.hbs` for extensions and find partials in `views/partials`.
@@ -82,9 +82,9 @@ app.use((err, req, res, next) => {
     res.render('error');
 });
 
-// cache the cafes in the app.locals.cafes
-Cafe.find({}, (err, res) =>{
-    console.log("Cached %d cafe's in the app.locals", res.length);
+//cache the cafes in the app.locals.cafes
+Cafe.find({}, (err, res) => {
+    console.log('Cached %d cafe\'s in the app.locals', res.length);
     app.locals.cafes = res;
 });
 

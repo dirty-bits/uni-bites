@@ -12,7 +12,7 @@ describe('uni-bites cafe tests', () => {
     });
 
     it('should contain the cafe name', () => {
-        let cafeHeader = element(by.css("h1"));
+        const cafeHeader = element(by.css('h1'));
         expect(cafeHeader).not.toBeNull();
         
         expect(cafeHeader.getText()).toBe('An Bialann');

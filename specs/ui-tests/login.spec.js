@@ -79,7 +79,7 @@ describe('uni-bites login tests', () => {
         btnSubmit.click();
         browser.sleep(500);//<-- really really bad remove later
         //by waiting for a new page to relload
-  
+
         //dont expect an error message to be shown
         expect(errorMessage.isPresent()).toBe(false);
 

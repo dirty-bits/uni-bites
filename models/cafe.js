@@ -7,6 +7,7 @@ require('./util');
 
 const cafeSchema = new mongoose.Schema({
     name: { type: String },
+    urlTag: { type: String },
     location: { type: String }
 });
 

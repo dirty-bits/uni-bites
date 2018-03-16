@@ -20,18 +20,16 @@ const usersSchema = new Schema({
     access_token: { type: String }
 });
 
-usersSchema.pre('save', function (next) {
-    console.log('saving user: password: %s password_hash: %s', this.password, this.password_hash);
+usersSchema.pre('save', (next) => {
+    //object validation should go in these handlers
     next();
 });
 
 usersSchema.methods.generateHash = function (password) {
-    console.log('usersSchema.methods.generateHash: %s', password);
     return bcrypt.hashSync(password, bcrypt.genSaltSync(8), null);
 };
 
 usersSchema.methods.validPassword = function (password) {
-    console.log('usersSchema.methods.validPassword: %s, %s', password, this.password_hash);
     return bcrypt.compareSync(password, this.password_hash);
 };
 

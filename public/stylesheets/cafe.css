@@ -6,10 +6,10 @@
 }
 
 
-#heading{
+.heading{
     font-family: roboto;
-    font-size: 48px;
     font-weight: bold;
+    padding-top: 50px;
 }
 
 /* '.title' is for the menu, review and opening hours */

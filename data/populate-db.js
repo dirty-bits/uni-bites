@@ -10,12 +10,9 @@ console.log(`   mongodb://${mongoose.connection.host}:${mongoose.connection.port
 console.log('   Clearing out old entries and inserting default data.\n');
 
 //dropDb();
-populateUsers();
-populateCafes();
-
-//TODO: remove this and promisify
-//mongodbConnection.disconnect();
-setTimeout(() => {
-    console.log('[+] Finsihed - Press Ctrl+c to exit');
-},
-10000);
+populateUsers()
+.then(populateCafes)
+.then(()=>{
+    console.log('[+] Finished adding data to model.');
+    mongodbConnection.disconnect();
+});

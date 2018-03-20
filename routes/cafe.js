@@ -13,6 +13,8 @@ router.get('/:cafename', (req, res, next) => {
 
     const cafes = req.app.locals.cafes;
 
+    console.log(JSON.stringify(req.app.locals));
+
     for(let i = 0; i < cafes.length; i++) {
         if(cafes[i].urlTag == cafeTag) {
             cafeTitle = cafes[i].name;

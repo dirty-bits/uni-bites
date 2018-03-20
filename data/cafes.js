@@ -37,17 +37,19 @@ const cafes = [
 ];
 
 function add_cafes() {
-    console.log('[Cafes]');
+    //clear out entries, add default data
+    return Cafe.deleteMany({}).then(
+        (res) => {
+            console.log('[Cafes]');
+            console.log('Removed existing cafes, %s', res);
+            for(let i = 0; i < cafes.length; i++) {
+                console.log(`    * ${cafes[i].name}`);
+                new Cafe(cafes[i]).save();
+            }
 
-    //clear out entries
-    Cafe.deleteMany({}).exec();
-
-    for(let i = 0; i < cafes.length; i++) {
-        console.log(`    * ${cafes[i].name}`);
-        new Cafe(cafes[i]).save();
-    }
-
-    console.log();
+            console.log();
+        }
+    );
 }
 
 module.exports = add_cafes;

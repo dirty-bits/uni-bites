@@ -2,7 +2,12 @@ const mongoose = require('mongoose');
 
 let connection = null;
 
-const mongodbConnectionString = 'mongodb://#MongoDbUser#:#MongoDbPassword#@#MongoDbServer#:#MongoDbPort#/#MongoDbSchema#';
+// mongodbConnectionString was moved to the .env file in the project root 
+/* .env file template
+MONGODB=mongodb://#MongoDbUser#:#MongoDbPassword#@#MongoDbServer#:#MongoDbPort#/#MongoDbSchema#
+ENVIRONMENT=development
+*/
+const mongodbConnectionString = process.env.MONGODB;
 
 if(!mongoose.connection.db) {
     connection = mongoose.connect(mongodbConnectionString, (err) => {

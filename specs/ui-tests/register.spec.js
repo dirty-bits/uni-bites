@@ -3,7 +3,8 @@
 const User = require('../../models/user');
 
 describe('uni-bites user registration', () => {
-    //var until = protractor.ExpectedConditions;
+    var until = protractor.ExpectedConditions;
+
     let txtFullName;
     let txtEmail;
     let txtPassword;
@@ -25,21 +26,10 @@ describe('uni-bites user registration', () => {
         btnSubmit = element(by.css('button[type=\'submit\']'));
     });
 
-    //var removeUser = false;
-    //afterEach(function(){
-    //// this is a better place to have db tidyup code, but there should not be any need
-    //// to run it when it is not necessary (database has not been updated);
-
-    //// remove user created
-    //if(removeUser){
-    //User.findOneAndRemove({'user_name':browser.params.registerUser.name}).exec();
-    //}
-    //});
-
     afterAll(() => {
     //Remove the test user.. this is a bit odd here as the test user could only be created
     //once but if there is a need for the user to be removed after several individual test
-    //we are reverting to the previous code.. setting a boolean parameter after the test
+    //we need to reverting to the previous code.. setting a boolean parameter after the test
     //and checking for that after each test.. (that is pobably better but the code is ugly)
         User.findOneAndRemove({ email: browser.params.registerUser.email }).exec();
     });
@@ -50,11 +40,9 @@ describe('uni-bites user registration', () => {
 
     it('should fail if full name is empty', () => {
         txtFullName.sendKeys('');
-
         btnSubmit.click();
-        browser.sleep(500);//<-- really really bad remove later by waiting for the div:
-        //<div class="swal2-container swal2-center swal2-fade swal2-shown">
-        //to become invisible
+
+        browser.wait(until.visibilityOf(errorMessage), 5000);
 
         expect(errorMessage.getText()).toContain('Please enter a full name.');
     });
@@ -62,11 +50,9 @@ describe('uni-bites user registration', () => {
     it('should fail if the email is empty', () => {
         txtFullName.sendKeys(browser.params.registerUser.name);
         txtEmail.sendKeys('');
-
         btnSubmit.click();
-        browser.sleep(500);//<-- really really bad remove later by waiting for the div:
-        //<div class="swal2-container swal2-center swal2-fade swal2-shown">
-        //to become invisible
+
+        browser.wait(until.visibilityOf(errorMessage), 5000);
 
         expect(errorMessage.getText()).toContain('Please enter an email.');
     });
@@ -74,14 +60,11 @@ describe('uni-bites user registration', () => {
     it('should fail if the password does not match the confirmation password', () => {
         txtFullName.sendKeys(browser.params.registerUser.name);
         txtEmail.sendKeys(browser.params.registerUser.email);
-
         txtPassword.sendKeys('1');
         txtConfirmPassword.sendKeys('2');
-
         btnSubmit.click();
-        browser.sleep(500);//<-- really really bad remove later by waiting for the div:
-        //<div class="swal2-container swal2-center swal2-fade swal2-shown">
-        //to become invisible
+
+        browser.wait(until.visibilityOf(errorMessage), 5000);
 
         expect(errorMessage.getText()).toContain('Password and password confirmation do not match.');
     });
@@ -93,7 +76,8 @@ describe('uni-bites user registration', () => {
         txtConfirmPassword.sendKeys(browser.params.registerUser.password);
 
         btnSubmit.click();
-        browser.sleep(4000); //TODO: do wait for url to change, this is messy (non-deterministic)
+
+        browser.wait(until.not(until.urlContains('/register')), 5000);
 
         //dont expect an error message to be shown
         expect(errorMessage.isPresent()).toBe(false);

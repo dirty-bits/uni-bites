@@ -6,10 +6,10 @@ var Schema = mongoose.Schema;
 require('./util');
 console.log(JSON.stringify(imageSchema));
 
-var cafeSchema = new mongoose.Schema({
-    name:  {type: String},
-    location:  {type: String},
-    images: [imageSchema]
+const cafeSchema = new mongoose.Schema({
+    name: { type: String },
+    location: { type: String },
+    urlTag: { type: String }
 });
 
-module.exports =  mongoose.model('unibites-cafes', cafeSchema);
+module.exports = mongoose.model('unibites-cafes', cafeSchema);

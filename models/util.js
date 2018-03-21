@@ -1,11 +1,11 @@
-var mongoose = require("mongoose");
-var connection = null;
+const mongoose = require('mongoose');
 
-var mongodbConnectionString = "mongodb://mongodb3197fa:ny3pip@danu7.it.nuigalway.ie:8717/mongodb3197";
+let connection = null;
 
-if (!mongoose.connection.db) {
-    connection = mongoose.connect(mongodbConnectionString, function(err) {
+const mongodbConnectionString = 'mongodb://#MongoDbUser#:#MongoDbPassword#@#MongoDbServer#:#MongoDbPort#/#MongoDbSchema#';
 
+if(!mongoose.connection.db) {
+    connection = mongoose.connect(mongodbConnectionString, (err) => {
         if(err) {
             console.error("Error connecting to mongoDB: %d", JSON.stringify(err));
             return;
@@ -18,4 +18,4 @@ if (!mongoose.connection.db) {
     });
 }
 
-exports.connection = connection;
+module.exports = connection;

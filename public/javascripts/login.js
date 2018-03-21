@@ -1,16 +1,16 @@
-$(document).ready( function() {
+$(document).ready(() => {
     /**
     * Event handler for when the user attempts to login
     */
-    $("#log-form").submit(function (event) {
+    $('#log-form').submit((event) => {
         event.preventDefault();
 
-        var email = event.target.inputEmail.value;
-        var password = event.target.inputPassword.value;
+        const email = event.target.inputEmail.value;
+        const password = event.target.inputPassword.value;
 
         if(email.length == 0 || password.length == 0) {
             swal('Error',
-                'Please enter an email and password.', // TODO: this should be from a file
+                'Please enter an email and password.', //TODO: this should be from a file
                 'error');
 
             return;
@@ -21,16 +21,16 @@ $(document).ready( function() {
             url: '/login',
             dataType: 'json',
             data: {
-                'user_name': email,
-                'password': password
+                email,
+                password
             },
-            success: function(token){
+            success(token) {
                 $(location).attr('href', '/feed');
             },
-            error: function(errMsg) {
-                swal( 'Oops...',
+            error(errMsg) {
+                swal('Oops...',
                     errMsg.responseJSON.body,
-                    'error' );
+                    'error');
             }
         });
     });

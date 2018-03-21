@@ -1,35 +1,36 @@
-$(document).ready( function() {
+$(document).ready(() => {
     /**
     * Event handler for when the user attempts to register
     */
-    $("#reg-form").submit(function (event) {
+    $('#reg-form').submit((event) => {
         event.preventDefault();
-        // data checking
 
-        var full_name = event.target.inputFullName.value;
-        var email = event.target.inputEmail.value;
-        var password = event.target.inputPassword.value;
-        var confirm_password = event.target.inputConfirmPassword.value;
+        //data checking
 
-        var message = "";
-        if(full_name.length == 0){
-            message += "Please enter a full name.<br/>";
+        const full_name = event.target.inputFullName.value;
+        const email = event.target.inputEmail.value;
+        const password = event.target.inputPassword.value;
+        const confirm_password = event.target.inputConfirmPassword.value;
+
+        let message = '';
+        if(full_name.length == 0) {
+            message += 'Please enter a full name.<br/>';
         }
     
-        if(email.length == 0){
-            message += "Please enter an email.<br/>";
+        if(email.length == 0) {
+            message += 'Please enter an email.<br/>';
         }
 
-        if(password.length == 0){
-            message += "Please enter a password.<br/>";
+        if(password.length == 0) {
+            message += 'Please enter a password.<br/>';
         }
 
-        if(confirm_password.length == 0){
-            message += "Please enter the confirmation password.<br/>";
+        if(confirm_password.length == 0) {
+            message += 'Please enter the confirmation password.<br/>';
         }
 
-        if(password.length > 0 && confirm_password != password){
-            message += "Password and password confirmation do not match.<br/>"
+        if(password.length > 0 && confirm_password != password) {
+            message += 'Password and password confirmation do not match.<br/>';
         }
 
         if(message.length > 0) {
@@ -45,20 +46,21 @@ $(document).ready( function() {
             url: '/register',
             dataType: 'json',
             data: {
-                'full_name': full_name,
-                'email': email,
-                'password': password,
-                'confirm_password': confirm_password
+                full_name,
+                email,
+                password,
+                confirm_password
             },
-            success: function(token){
-                $(location).attr('href', '/feed' );
-                // Redirect to a login page
+            success(token) {
+                $(location).attr('href', '/feed');
+
+                //Redirect to a login page
             },
-            error: function(errMsg) {
+            error(errMsg) {
                 swal('Oops...',
                     errMsg.responseJSON.body,
                     'error');
             }
         });
-    }); 
+    });
 });

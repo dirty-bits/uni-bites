@@ -1,17 +1,17 @@
-var express = require('express');
-var router = express.Router();
-var jwt = require('jsonwebtoken');
-var User = require('../models/user');
+const express = require('express');
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
+const router = express.Router();
+const jwt = require('jsonwebtoken');
+const User = require('../models/user');
+
+/*GET users listing. */
+router.get('/', (req, res, next) => {
     res.send('respond with a resource');
 });
 
-router.get('/logout', function(req, res, next) {
+router.get('/logout', (req, res, next) => {
     res.clearCookie('Authorization');
-    res.redirect("/");
+    res.redirect('/');
 });
-
 
 module.exports = router;

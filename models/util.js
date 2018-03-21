@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 let connection = null;
 
-const mongodbConnectionString = 'mongodb://#MongoDbUser#:#MongoDbPassword#@#MongoDbServer#:#MongoDbPort#/#MongoDbSchema#';
+var mongodbConnectionString = "mongodb://localhost:27017/tester";
 
 if(!mongoose.connection.db) {
     connection = mongoose.connect(mongodbConnectionString, (err) => {

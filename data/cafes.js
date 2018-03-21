@@ -42,12 +42,12 @@ function add_cafes() {
         (res) => {
             console.log('[Cafes]');
             console.log('Removed existing cafes, %s', res);
-            for(let i = 0; i < cafes.length; i++) {
-                console.log(`    * ${cafes[i].name}`);
-                new Cafe(cafes[i]).save();
-            }
-
-            console.log();
+            return Cafe.insertMany(cafes, (err, docs) => {
+                for(let i = 0; i < docs.length; i++) {
+                    console.log(`    * ${docs[i].name}`);
+                }
+                console.log();
+            });
         }
     );
 }

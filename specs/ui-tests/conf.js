@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const HtmlScreenshotReporter = require('protractor-jasmine2-screenshot-reporter');
 const path = require('path');
 

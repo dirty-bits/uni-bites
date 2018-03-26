@@ -10,6 +10,7 @@
     -moz-transition: background-color 1s ease-in-out;
     -o-transition: background-color 1s ease-in-out;
     -ms-transition: background-color 1s ease-in-out;
+    overflow-x: hidden;
 }
 
 .navigation.alt-color {
@@ -37,20 +38,20 @@
 
 .specialButton:hover {
     border: 3px solid #2D9CDB;
+    background-color: #2D9CDB !important;
 }
 
-/*
-ul.nav a:hover {
+
+.hover_col:hover {
     background-color: #2D9CDB !important;
     padding-bottom: 20px;
 }
-*/
 
-/*
 .drop:hover {
-    padding-bottom: 0px !important;
+    background-color: #2D9CDB !important;
 }
-*/
+
+
 
 .brand {
     padding: 0px 0px;

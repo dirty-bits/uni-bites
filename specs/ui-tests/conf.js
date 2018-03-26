@@ -4,7 +4,7 @@ const HtmlScreenshotReporter = require('protractor-jasmine2-screenshot-reporter'
 const path = require('path');
 
 var reporter = new HtmlScreenshotReporter({
-    dest: `${__dirname}/report`,
+    dest: `${__dirname}\\report`,
     filename: 'test-report.html',
     cleanDestination: true,
     captureOnlyFailedSpecs: true

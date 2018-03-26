@@ -10,7 +10,7 @@
     -moz-transition: background-color 1s ease-in-out;
     -o-transition: background-color 1s ease-in-out;
     -ms-transition: background-color 1s ease-in-out;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 .navigation.alt-color {

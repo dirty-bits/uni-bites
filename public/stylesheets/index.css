@@ -2,8 +2,9 @@
     background-image: url("../images/meal2.jpg");
     background-size: cover;
     height: 95vh;
-    overflow-x: hidden;
-    overflow-y: hidden;
+    overflow: hidden;
+    margin-left: 0px;
+    margin-right: 0px;
 }
 
 .search_bar {
@@ -43,8 +44,7 @@
 	margin-top: 20px;
     background-size: cover;
 	min-height: 50px;
-    overflow-x: hidden;
-    overflow-y: hidden;
+    overflow: hidden;
     padding: 0px 0px 0px 175px;
 }
 
@@ -81,4 +81,9 @@
 
 .dropdown-menu a:hover {
     background-color: #2D9CDB !important;
+}
+
+.row_format {
+    margin-right: 0px;
+    margin-left: 0px;
 }

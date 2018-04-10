@@ -4,7 +4,7 @@ const HtmlScreenshotReporter = require('protractor-jasmine2-screenshot-reporter'
 const path = require('path');
 
 var reporter = new HtmlScreenshotReporter({
-    dest: `${__dirname}\\report`,
+    dest: `${__dirname}/report`,
     filename: 'test-report.html',
     cleanDestination: true,
     captureOnlyFailedSpecs: true
@@ -15,7 +15,7 @@ exports.config = {
     seleniumAddress: 'http://localhost:4444/wd/hub',
     specs: ['*.spec.js'], //'*.spec.js'
     capabilities: {
-        browserName: 'firefox' //manually change to chrome, android, ios etc.. for testing sessions
+        browserName: 'chrome' //manually change to chrome, android, ios etc.. for testing sessions
     },
     stackTrace: false,
 

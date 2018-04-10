@@ -93,6 +93,9 @@ a:after {
 .bgFooterCopyright {
     background-color: #EF7E1A;
     height: 50px;
+    margin-right: 0px;
+    margin-left: 0px;
+    overflow: hidden;
 }
 
 .footerBar {

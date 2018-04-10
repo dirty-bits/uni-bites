@@ -2,8 +2,9 @@
     background-image: url("../images/meal2.jpg");
     background-size: cover;
     height: 95vh;
-    overflow-x: hidden;
-    overflow-y: hidden;
+    overflow: hidden;
+    margin-left: 0px;
+    margin-right: 0px;
 }
 
 .search_bar {
@@ -43,9 +44,8 @@
 	margin-top: 20px;
     background-size: cover;
 	min-height: 50px;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    padding: 0px 0px 0px 50px;
+    overflow: hidden;
+    padding: 0px 0px 0px 175px;
 }
 
 .quickBox {
@@ -65,11 +65,13 @@
 }
 
 .toRight {
-    padding: 0px 0px 0px 25px;
+    align-content: right;
+    padding: 0px 0px 0px 10px;
 }
 
 .alignText {
-    padding: 0px 0px 0px 10px;
+    margin-right: 0px;
+    padding: 0px 0px 0px 170px;
 }
 
 .searchDrop {
@@ -79,4 +81,9 @@
 
 .dropdown-menu a:hover {
     background-color: #2D9CDB !important;
+}
+
+.row_format {
+    margin-right: 0px;
+    margin-left: 0px;
 }

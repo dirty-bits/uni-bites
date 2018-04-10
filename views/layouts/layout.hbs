@@ -68,10 +68,10 @@
                             <a class="hover_col" href="/about-us">About Us</a>
                         </li>
                         <li class="nav navbar-nav">
-                            <a class="dropdown-toggle hover_col" data-toggle="dropdown" href="#">Cafes
+                            <a id="dropdown-toggle" class="dropdown-toggle hover_col" data-toggle="dropdown" href="#">Cafes
                                 <span class="caret"></span>
                             </a>
-                            <ul class="dropdown-menu">
+                            <ul id="dropdown-menu" class="dropdown-menu">
                                 {{#each cafes}}
                                     <li><a class="drop" href="/cafe/{{urlTag}}">{{name}}</a></li>
                                 {{/each}}

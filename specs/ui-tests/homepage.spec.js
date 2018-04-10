@@ -22,8 +22,8 @@ describe('uni-bites homepage tests', () => {
 
     //navigation
     it('should display the cafes menu when the button is clicked', () => {
-        const ddCafes = element(by.css('a[class=\'dropdown-toggle\']'));
-        const ddCafesMenu = element(by.css('ul[class=\'dropdown-menu\']'));
+        const ddCafes = element(by.css('#dropdown-toggle'));
+        const ddCafesMenu = element(by.css('#dropdown-menu'));
 
         expect(ddCafes).not.toBeNull();
         expect(ddCafesMenu).not.toBeNull();

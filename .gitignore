@@ -63,3 +63,4 @@ typings/
 # ignore _book folder for the gitbook generated content
 docs/_book/
 _book/
+specs/ui-tests/report/

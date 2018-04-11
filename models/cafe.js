@@ -1,13 +1,15 @@
-const mongoose = require('mongoose');
-const bcrypt = require('bcrypt-nodejs');
-
-const Schema = mongoose.Schema;
+var mongoose = require('mongoose');
+var bcrypt = require('bcrypt-nodejs');
+var Schema = mongoose.Schema;
 
 require('./util');
 
-const cafeSchema = new mongoose.Schema({
-    name: { type: String },
-    location: { type: String }
+var cafeSchema = new mongoose.Schema({
+  name: String,
+  location: String
 });
 
-module.exports = mongoose.model('unibites-cafes', cafeSchema);
+module.exports = {
+    model = mongoose.model('unibites-users', cafeSchema)
+    schema: cafeSchema;
+}

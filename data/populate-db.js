@@ -1,21 +1,32 @@
-const mongoose = require('mongoose');
 
-const populateUsers = require('./users');
-const populateCafes = require('./cafes');
+var mongoose = require('mongoose');
+var commentData = require('./comments');
+var userData = require('./users');
+var mongodbConnection = require('../models/util.js');
 
-const mongodbConnection = require('../models/util.js');
+console.log("Attempting to populate the database.. ");
 
-console.log('[populate-db]');
-console.log(`   mongodb://${mongoose.connection.host}:${mongoose.connection.port}/${mongoose.connection.name}\n`);
-console.log('   Clearing out old entries and inserting default data.\n');
+// this could fail when there are more complex dependencies between the documents
+commentData.populateDB().then(
+    function(){
+        userData.populateDB();
+    }
+).finally(function (){
+    // close database
+});
 
-//dropDb();
-populateUsers();
-populateCafes();
+/*
+    try
+    {
+        // should be promise based.. 
 
-//TODO: remove this and promisify
-//mongodbConnection.disconnect();
-setTimeout(() => {
-    console.log('[+] Finsihed - Press Ctrl+c to exit');
-},
-10000);
+    }
+    finally
+    {
+        // mongodbConnection.connection.disconnect(
+        //     function(error){
+        //         console.log("error disconnecting from database: ", error);
+        //     }
+        // )
+    }
+*/

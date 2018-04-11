@@ -1,5 +1,0 @@
-# Technologies
-
-# Technoology Stack
-
-## 

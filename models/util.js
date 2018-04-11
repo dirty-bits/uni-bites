@@ -1,20 +1,17 @@
-var mongoose = require("mongoose");
-var connection = null;
+const mongoose = require('mongoose');
 
-var mongodbConnectionString = "mongodb://#MongoDbUser#:#MongoDbPassword#@#MongoDbServer#:#MongoDbPort#/#MongoDbSchema#";
+let connection = null;
 
-console.log(mongoose.connection.db);
+const mongodbConnectionString = 'mongodb://#MongoDbUser#:#MongoDbPassword#@#MongoDbServer#:#MongoDbPort#/#MongoDbSchema#';
 
-if (!mongoose.connection.db) {
-    connection = mongoose.connect(mongodbConnectionString, function(err) {
-
+if(!mongoose.connection.db) {
+    connection = mongoose.connect(mongodbConnectionString, (err) => {
         if(err) {
-            console.error("Error connecting to mongoDB: %d", JSON.stringify(err));
-        } else {
-            console.log("connected to database...... ");
+            console.error('Error connecting to mongoDB: %d', JSON.stringify(err));
+        } else{
+            console.log('connected to database...... ');
         }
-        console.log("connected to database: danu7.it.nuigalway.ie");
     });
 }
 
-exports.connection = connection;
+module.exports = connection;

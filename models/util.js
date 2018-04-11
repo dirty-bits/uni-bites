@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 let connection = null;
 
-// mongodbConnectionString was moved to the .env file in the project root 
+// mongodbConnectionString was moved to the .env file in the project root
 /* .env file template
 MONGODB=mongodb://#MongoDbUser#:#MongoDbPassword#@#MongoDbServer#:#MongoDbPort#/#MongoDbSchema#
 ENVIRONMENT=development

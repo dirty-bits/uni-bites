@@ -72,47 +72,20 @@
             <div class="container">
                 <div class="col-sm-4">
                     <div class="menu-body">
-                        <!-- Start of lunch menu -->
+
                         <p class="menu-section-title">Lunch</p>
-                        <!-- Item starts -->
+
+                        {{#each lunch_menu}}
                         <div class="menu-item">
                             <div class="menu-item-name">
-                                Sandwich
+                                {{name}}
                             </div>
                             <div class="menu-item-price">
-                                €3.95
+                                {{price}}
                             </div>
                         </div>
-                        <!-- Item ends -->
-                        <!-- Item starts -->
-                        <div class="menu-item">
-                            <div class="menu-item-name">
-                                Panini/Bap
-                            </div>
-                            <div class="menu-item-price">
-                                €4.50
-                            </div>
-                        </div>
-                        <!-- Item ends -->
-                        <!-- Item starts -->
-                        <div class="menu-item">
-                            <div class="menu-item-name">
-                                Salad
-                            </div>
-                            <div class="menu-item-price">
-                                €3.95
-                            </div>
-                        </div>
-                        <!-- Item ends -->
-                        <!-- Item starts -->
-                        <div class="menu-item">
-                            <div class="menu-item-name">
-                                Chocolate Bar
-                            </div>
-                            <div class="menu-item-price">
-                                0.90c
-                            </div>
-                        </div>
+                        {{/each}}
+
                         <!-- Item ends -->
                     </div>
                 </div>

@@ -25,7 +25,7 @@ usersSchema.pre('save', (next) => {
     next();
 });
 
-usersSchema.methods.generateHash = function (password) {
+usersSchema.statics.generateHash = function (password) {
     return bcrypt.hashSync(password, bcrypt.genSaltSync(8), null);
 };
 

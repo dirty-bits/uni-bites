@@ -11,4 +11,9 @@ const cafeSchema = new mongoose.Schema({
     urlTag: { type: String }
 });
 
+cafeSchema.methods.getPrices = function() {
+    return
+};
+
+
 module.exports = mongoose.model('unibites-cafes', cafeSchema);

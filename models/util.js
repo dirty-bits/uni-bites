@@ -10,7 +10,7 @@ ENVIRONMENT=development
 const mongodbConnectionString = process.env.MONGODB;
 
 if(!mongoose.connection.db) {
-    connection = mongoose.connect(mongodbConnectionString, (err) => {
+    connection = mongoose.connect(mongodbConnectionString, { useMongoClient: true }, (err) => {
         if(err) {
             console.error('Error connecting to mongoDB: %d', JSON.stringify(err));
         } else{

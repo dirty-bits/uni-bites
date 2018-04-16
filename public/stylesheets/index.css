@@ -69,11 +69,6 @@
     padding: 0px 0px 0px 10px;
 }
 
-.alignText {
-    margin-right: 0px;
-    padding: 0px 0px 0px 170px;
-}
-
 .searchDrop {
     left: -440px;
     min-width: 342px;
@@ -81,9 +76,4 @@
 
 .dropdown-menu a:hover {
     background-color: #2D9CDB !important;
-}
-
-.row_format {
-    margin-right: 0px;
-    margin-left: 0px;
 }

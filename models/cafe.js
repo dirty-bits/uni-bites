@@ -1,9 +1,10 @@
-const mongoose = require('mongoose');
-const bcrypt = require('bcrypt-nodejs');
-
-const Schema = mongoose.Schema;
+var mongoose = require('mongoose');
+var bcrypt = require('bcrypt-nodejs');
+var imageSchema = require('./image').schema;
+var Schema = mongoose.Schema;
 
 require('./util');
+console.log(JSON.stringify(imageSchema));
 
 const cafeSchema = new mongoose.Schema({
     name: { type: String },

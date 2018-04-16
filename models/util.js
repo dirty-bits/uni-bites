@@ -12,9 +12,13 @@ const mongodbConnectionString = process.env.MONGODB;
 if(!mongoose.connection.db) {
     connection = mongoose.connect(mongodbConnectionString, { useMongoClient: true }, (err) => {
         if(err) {
-            console.error('Error connecting to mongoDB: %d', JSON.stringify(err));
-        } else{
-            console.log('connected to database...... ');
+            console.error("Error connecting to mongoDB: %d", JSON.stringify(err));
+            return;
+        } else {
+            console.log("connected to database...... ");
+            require('./user');
+            require('./image');
+            require('./cafe');
         }
     });
 }

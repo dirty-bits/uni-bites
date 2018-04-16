@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt-nodejs');
-const Comment = require('./models/comment');
+const Comment = require('./comment');
 
 const Schema = mongoose.Schema;
 const ObjectId = Schema.Types.ObjectId;
@@ -18,7 +18,19 @@ const cafeSchema = new mongoose.Schema({
     
 });
 
-//star rating for cafes
+cafeSchema.methods.avgRating = function (average){
+    return Comment.aggregate([
+    {
+        $group: {
+            _id: '$cafe',
+            ratingAvg: {$avg: '$rating'}
+        }
+    }
+]);
+   
+};
+
+//average star rating for cafes
 Comment.aggregate([
     {
         $group: {

@@ -30,19 +30,5 @@ cafeSchema.methods.avgRating = function (average){
    
 };
 
-//average star rating for cafes
-Comment.aggregate([
-    {
-        $group: {
-            _id: '$cafe',
-            ratingAvg: {$avg: '$rating'}
-        }
-    }
-], function (err, results){
-    if(err){
-        console.log(err);
-    }else{
-        console.log(results);
-    }
-});
+
 module.exports = mongoose.model('unibites-cafes', cafeSchema);

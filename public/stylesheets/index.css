@@ -45,7 +45,7 @@
     background-size: cover;
 	min-height: 50px;
     overflow: hidden;
-    padding: 0px 0px 0px 175px;
+    padding-left: 100px;
 }
 
 .quickBox {
@@ -66,7 +66,11 @@
 
 .toRight {
     align-content: right;
-    padding: 0px 0px 0px 10px;
+    padding: 0px 0px 0px 50px;
+}
+
+.alignText {
+    padding: 0px 0px 0px 30px;
 }
 
 .searchDrop {

@@ -1,23 +1,24 @@
 const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
+const ObjectId = Schema.Types.ObjectId;
 require('./util');
 
 const commentSchema = new Schema({
-    user_name: { type: String },
-    comment: { type: String },
-    date_created: {
-        type: Date,
-        default: new Date()
+    user_name: { 
+        type: ObjectId, 
+        ref: "unibites-users" 
     },
-    up_votes: {
-        type: Number,
-        default: 0
-    },
-    down_votes: {
-        type: Number,
-        default: 0
-    }
-});
+        comment: { type: String },
+        date_created: {
+            type: Date,
+            default: new Date()
+        },
+        rating: Number,
+        cafe:{
+            type: ObjectId,
+            ref: "unibites-cafes"
+        }
+    });
 
-module.exports = mongoose.model('unibites-comments', commentSchema);
+    module.exports = mongoose.model('unibites-comments', commentSchema);

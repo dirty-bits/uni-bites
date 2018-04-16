@@ -24,7 +24,7 @@ module.exports = router;
 /**
 * Add comments to database
 */
-router.post('/addComment', (reg, res, next) => {
+router.post('/addComment', (req, res, next) => {
 //Extract the request body which contains the comments
     comment = new Comment(req.body);
     comment.save((err, savedComment) => {
@@ -50,5 +50,34 @@ router.get('/getComments', (req, res, next) => {
         res.json(comments);
     });
 });
+
+/**
+  Updates a comment already in the database
+ */
+router.put('/updateComment/:id', (req, res, next) => {
+
+    var id = req.params.id;
+    Comment.update({_id:id}, req.body, (err) => {
+        if (err)
+            res.send(err);
+
+        res.json({status : "Successfully updated the document"});
+    });
+});
+
+/**
+ * Deletes a comment from the database
+ */
+router.delete('/removeComment/:id', (req, res, next) => {
+
+    var id = req.params.id;
+    Comment.remove({_id:id}, (err) => {
+        if (err)
+            res.send(err);
+
+        res.json({status : "Successfully removed the document"});
+    });
+});
+
 
 module.exports = router;

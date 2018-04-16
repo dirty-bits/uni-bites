@@ -154,3 +154,8 @@ i {
 	color: white;
     text-align: left;
 }
+
+.spacing {
+    height: 32vh;
+    overflow-y: hidden;
+}

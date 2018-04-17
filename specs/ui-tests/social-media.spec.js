@@ -14,20 +14,20 @@ describe('uni-bites about tests', () => {
 
     it('should link to facebook page', () => {
         fbIcon.click();
-        browser.sleep(2000);
-        expect(browser.getCurrentUrl()).toBe('https://www.facebook.com/Uni-Bites-2463469143877653/?ref=page_internal');
+        browser.wait(until.urlContains(`https://www.facebook.com/Uni-Bites-2463469143877653/?ref=page_internal`), 5000);
+        //expect(browser.getCurrentUrl()).toBe('https://www.facebook.com/Uni-Bites-2463469143877653/?ref=page_internal');
     });
 
     it('should link to twitter page', () => {
         tweetIcon.click();
-        browser.sleep(2000);
-        expect(browser.getCurrentUrl()).toBe('https://twitter.com/BitesUni');
+        browser.wait(until.urlContains(`https://twitter.com/BitesUni`), 5000);
+        //expect(browser.getCurrentUrl()).toBe('https://twitter.com/BitesUni');
     });
     
     it('should link to instragram page', () => {
         instaIcon.click();
-        browser.sleep(2000);
-        expect(browser.getCurrentUrl()).toBe('https://www.instagram.com/bitesuni/');
+        browser.wait(until.urlContains(`https://www.instagram.com/bitesuni/`), 5000);
+        //expect(browser.getCurrentUrl()).toBe('https://www.instagram.com/bitesuni/');
     });
     
     afterEach(() => {

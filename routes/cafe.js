@@ -10,6 +10,8 @@ router.get('/:cafename', (req, res, next) => {
     const cafeTag = req.params.cafename;
     let cafeTitle = '';
     const cafe = '';
+    
+    
 
     const cafes = req.app.locals.cafes;
 
@@ -26,6 +28,29 @@ router.get('/:cafename', (req, res, next) => {
         title: `${cafeTitle} | Uni-Bites`,
         cafe: cafeTitle
     });
+    
+    /*Map*/
+   /* let currentCafe = '';
+    
+    for(let i = 0; i < cages.length; i++){
+        if(cafes[i].urlTag == cafeTag) {
+            currentCafe = cafes[i].long;
+            break;
+        }
+    }
+    
+    for(let i = 0; i < cages.length; i++){
+        if(cafes[i].urlTag == cafeTag) {
+            currentCafe = cafes[i].lat;
+            break;
+        }
+    }
+    
+    res.render('cafe',{
+    title: '${currentCafe.name} | Uni-Bites',
+    cafe: currentCafe
+});*/
+    
 });
 
 module.exports = router;

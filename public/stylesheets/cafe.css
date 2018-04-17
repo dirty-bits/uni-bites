@@ -79,12 +79,21 @@
 /* 'Star Rating - Hoover */
 .rating > input:checked ~ label,
 .rating:not(:checked) > label:hover,
-.rating:not(:checked) > label:hover ~ label {color: #F2944A}
+.rating:not(:checked) > label:hover ~ label {color: #ee7111}
 
 .rating > input:checked + label:hover,
 .rating > input:checked ~ label:hover,
 .rating > label:hover ~ input:checked ~ label,
-.rating > input:checked ~ label:hover ~ label {color: #ffed85}
+.rating > input:checked ~ label:hover ~ label {color: #F2944A}
+
+
+/* Map */
+#map{
+    width: 400px;
+    height: 400px;
+    background-color: grey;
+    margin-bottom: 25px;
+}
 
 
 

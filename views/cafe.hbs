@@ -94,44 +94,16 @@
                 <div class="row-sm-4 col-sm-offset-8">
                     <p class="menu-section-title">Drinks</p>
                     <!-- Item starts -->
-                    <div class="menu-item">
-                        <div class="menu-item-name">
-                            Regualar Coffee (12oz)
+                    {{#each drink_menu}}
+                        <div class="menu-item">
+                            <div class="menu-item-name">
+                                {{name}}
+                            </div>
+                            <div class="menu-item-price">
+                                {{price}}
+                            </div>
                         </div>
-                        <div class="menu-item-price">
-                            €1.30
-                        </div>
-                    </div>
-                    <!-- Item ends -->
-                    <!-- Item starts -->
-                    <div class="menu-item">
-                        <div class="menu-item-name">
-                            Regular Tea (12oz)
-                        </div>
-                        <div class="menu-item-price">
-                            €1.00
-                        </div>
-                    </div>
-                    <!-- Item ends -->
-                    <!-- Item starts -->
-                    <div class="menu-item">
-                        <div class="menu-item-name">
-                            Americano
-                        </div>
-                        <div class="menu-item-price">
-                            €1.60
-                        </div>
-                    </div>
-                    <!-- Item ends -->
-                    <!-- Item starts -->
-                    <div class="menu-item">
-                        <div class="menu-item-name">
-                            Latte
-                        </div>
-                        <div class="menu-item-price">
-                            €2.00
-                        </div>
-                    </div>
+                    {{/each}}
                     <!-- Item ends -->
                 <!-- End of drinks menu -->
                 </div>
@@ -154,7 +126,7 @@
             </div>
         </div><!-- /container -->
 
-    
+
     <div class="container">
         <div class="row col-sm-4">
              <!-- STAR RATING -->
@@ -182,7 +154,7 @@
                     </fieldset>
         </div>
     </div>
-    
+
         <!-- REVIEW BOX -->
         <div class="container">
             <div class="row col-sm-4">

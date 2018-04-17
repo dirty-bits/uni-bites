@@ -69,3 +69,8 @@ $('#btn-count').click((event) => {
         showPosts = false;
     }
 });
+
+$(function() {
+    rating = $(".rating").val();
+    console.log(rating);
+});

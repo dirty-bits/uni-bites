@@ -33,7 +33,7 @@ router.post('/addComment', (req, res, next) => {
         }
 
         res.json({
-            id: saveComment._id
+            id: savedComment._id
         });
     });
 });
@@ -42,7 +42,7 @@ router.post('/addComment', (req, res, next) => {
 *Return all comments from database
 */
 router.get('/getComments', (req, res, next) => {
-    Comment.find({ user_name: 'uni-bites' }, (err, comments) => {
+    Comment.find({ _id:id }, (err, comments) => {
         if(err) {
             res.send(err);
         }

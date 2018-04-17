@@ -12,10 +12,17 @@ $(document).ready(() => {
 
 $('#postForm').submit((event) => {
     event.preventDefault();
-
-    $.post('/api/addComment', { comment: event.target.inputPost.value }, (result) => {
+    $.post('/api/addComment', 
+        { 
+            comment: event.target.inputPost.value, 
+            rating: $("input[name='rating']:checked").val() 
+        }, (result) => {
         $('#charRemaining').html(totalCharacters);
+
+        // reset the form
         event.target.reset();
+        $("input[name='rating']").prop('checked', false);
+
         getComments();
 
         //alert(result.id);
@@ -23,25 +30,29 @@ $('#postForm').submit((event) => {
     });
 });
 
-$('#feedPosts').click((event) => {
-    console.log(event.target.name);
-    if(event.target.name) {
-        debugger;
-        $.ajax({
-            url: `/api/removeComment/${event.target.name}`,
-            type: 'DELETE',
-            success(result) {
-                getComments();
-            }
-        });
+function getStarsHtml(rating){
+    var html = ""
+    for(var i = 0; i < rating; i++){
+        html += '<span class="fa fa-star"></span>';
     }
-});
+    return html;
+}
 
 function getComments() {
     $.get('/api/getComments', (data) => {
-        let posts = '';
+        let posts = '<div class="col-sm-6"><p class="title">Reviews</p></div>';
         for(let i = 0; i < data.length; i++) {
-            posts += `<div class='row well text-left'><div class='col-xs-9'>${data[i].comment}</div><div class='col-xs-3'>` + `<button type='button' name='${data[i]._id}' class='btn btn-danger'>` + 'Delete</button></div></div></div>';
+            if(typeof(data[i].rating) == "undefined"){
+                data[i].rating = 1;
+            }
+
+            posts += 
+`<div class="col-sm-6">
+    <p>${data[i].user_name}</p>
+    <p>"${data[i].comment}"</p>
+` + getStarsHtml(data[i].rating) + `
+    <button type='button' name='${data[i]._id}' class='btn btn-danger'>Delete</button>
+</div>`;
         }
 
         $('#cafereviews').html(posts);
@@ -56,8 +67,3 @@ function getComments() {
         setTimeout(getComments, 10000);
     });
 }
-
-$(function() {
-    rating = $(".rating").val();
-    console.log(rating);
-});

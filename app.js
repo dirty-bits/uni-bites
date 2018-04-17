@@ -11,12 +11,13 @@ const bodyParser = require('body-parser');
 
 //Routes
 const cafeAPI = require('./routes/api');
+const commentsAPI = require('./routes/api/comments');
+
 const index = require('./routes/index');
 const users = require('./routes/users');
 const login = require('./routes/login');
 const feed = require('./routes/feed');
 const register = require('./routes/register');
-const commentsAPI = require('./routes/comments');
 const cafe = require('./routes/cafe');
 const privacyPolicy = require('./routes/privacy-policy');
 const aboutUs = require('./routes/about-us');
@@ -55,8 +56,9 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/api', cafeAPI);
+app.use('/api', commentsAPI); //TODO: Move this to its own api/Section, check mongodb api
+
 app.use('/', index);
-app.use('/', commentsAPI); //TODO: Move this to its own api/Section, check mongodb api
 app.use('/users', users);
 app.use('/login', login);
 app.use('/feed', feed);

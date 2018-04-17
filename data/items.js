@@ -35,7 +35,7 @@ const items = [
     },
     {
         name: "Panini/Bap",
-        price: [{cafeTag: "an-bialann", price: 3.95}, {cafeTag: "zinc", price: 5.00}, {cafeTag: "smokeys", price: 4.70}, {cafeTag: "cafe-na-gaeilge", price: 4.50}, {cafeTag: "sult", price: 4.30}, {cafeTag: "wall", price: 3.95}, {cafeTag: "friars", price: 4.95.00}],
+        price: [{cafeTag: "an-bialann", price: 3.95}, {cafeTag: "zinc", price: 5.00}, {cafeTag: "smokeys", price: 4.70}, {cafeTag: "cafe-na-gaeilge", price: 4.50}, {cafeTag: "sult", price: 4.30}, {cafeTag: "wall", price: 3.95}, {cafeTag: "friars", price: 4.95}],
         category: "Lunch"
     },
     {

@@ -13,7 +13,7 @@ var reporter = new HtmlScreenshotReporter({
 exports.config = {
     framework: 'jasmine',
     seleniumAddress: 'http://localhost:4444/wd/hub',
-    specs: ['social-media.spec.js'], //'*.spec.js'
+    specs: ['*.spec.js'], //'*.spec.js'
     capabilities: {
         browserName: 'firefox' //manually change to chrome, android, ios etc.. for testing sessions
     },

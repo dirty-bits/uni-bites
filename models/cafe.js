@@ -8,7 +8,7 @@ require('./util');
 const cafeSchema = new mongoose.Schema({
     name: { type: String },
     location: { type: String },
-    urlTag: { type: String }
+    urlTag: { type: String },
 });
 
 cafeSchema.methods.getPrices = function() {

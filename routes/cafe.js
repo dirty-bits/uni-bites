@@ -7,6 +7,7 @@ const User = require('../models/cafe');
 router.get('/:cafename', (req, res, next) => {
     console.log(req.params.cafename);
 
+
     const viewModel = {
         cafeTag: req.params.cafeTag,
         cafeName: req.params.cafename,
@@ -58,6 +59,7 @@ router.get('/:cafename', (req, res, next) => {
         ]
     }
 
+
     const cafes = req.app.locals.cafes;
 
     console.log(JSON.stringify(req.app.locals));
@@ -70,6 +72,7 @@ router.get('/:cafename', (req, res, next) => {
     }
 
     res.render('cafe', viewModel);
+
 });
 
 module.exports = router;

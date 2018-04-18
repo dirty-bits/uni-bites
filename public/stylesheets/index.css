@@ -45,7 +45,7 @@
     background-size: cover;
 	min-height: 50px;
     overflow: hidden;
-    padding: 0px 0px 0px 175px;
+    padding-left: 100px;
 }
 
 .quickBox {
@@ -66,12 +66,11 @@
 
 .toRight {
     align-content: right;
-    padding: 0px 0px 0px 10px;
+    padding: 0px 0px 0px 50px;
 }
 
 .alignText {
-    margin-right: 0px;
-    padding: 0px 0px 0px 170px;
+    padding: 0px 0px 0px 30px;
 }
 
 .searchDrop {
@@ -81,9 +80,4 @@
 
 .dropdown-menu a:hover {
     background-color: #2D9CDB !important;
-}
-
-.row_format {
-    margin-right: 0px;
-    margin-left: 0px;
 }

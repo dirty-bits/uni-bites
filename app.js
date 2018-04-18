@@ -92,4 +92,9 @@ Cafe.find({}, (err, res) => {
     app.locals.cafes = res;
 });
 
+// handlebars helpers
+hbs.registerHelper("json", function(object){
+    return JSON.stringify(object);
+});
+
 module.exports = app;

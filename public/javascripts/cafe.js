@@ -40,14 +40,14 @@ function getStarsHtml(rating){
 
 function getComments() {
     $.get('/api/getComments', (data) => {
-        let posts = '<div class="col-sm-6"><p class="title">Reviews</p></div>';
+        let posts = '<div class="col-sm-12 "><p class="title">Reviews</p></div>';
         for(let i = 0; i < data.length; i++) {
             if(typeof(data[i].rating) == "undefined"){
                 data[i].rating = 1;
             }
 
             posts += 
-`<div class="col-sm-6">
+`<div class="col-sm-4">
     <p>${data[i].user_name}</p>
     <p>"${data[i].comment}"</p>
 ` + getStarsHtml(data[i].rating) + `

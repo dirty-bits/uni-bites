@@ -232,24 +232,8 @@
                 </div>
             </div>
             <!-- MAP -->
-            <div class="row-sm-4 col-sm-offset-8" id="map"></div>
-            <script>
-      function initMap() {
-        //var long = {{long}};
-        //var latit = {{lat}};
-        var uluru = {lng: long,lat: latit};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 16,
-          center: uluru
-        });
-        var marker = new google.maps.Marker({
-          position: uluru,
-          map: map
-        });
-      }
-    </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
-    </script>
+             <div class="row-sm-4 col-sm-offset-8" class="map" style="padding-bottom: 25px">
+                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2385.719631139335!2d-9.064094784348601!3d53.276642987631284!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x485b96f6d2556047%3A0x933f96f6770f766d!2sNUIG!5e0!3m2!1sen!2sie!4v1524059489634" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
             
     </div><!-- /container -->

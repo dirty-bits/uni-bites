@@ -29,28 +29,6 @@ router.get('/:cafename', (req, res, next) => {
         cafe: cafeTitle
     });
     
-    /*Map*/
-   /* let currentCafe = '';
-    
-    for(let i = 0; i < cages.length; i++){
-        if(cafes[i].urlTag == cafeTag) {
-            currentCafe = cafes[i].long;
-            break;
-        }
-    }
-    
-    for(let i = 0; i < cages.length; i++){
-        if(cafes[i].urlTag == cafeTag) {
-            currentCafe = cafes[i].lat;
-            break;
-        }
-    }
-    
-    res.render('cafe',{
-    title: '${currentCafe.name} | Uni-Bites',
-    cafe: currentCafe
-});*/
-    
 });
 
 module.exports = router;

@@ -4,51 +4,35 @@ const Cafe = require('../models/cafe.js');
 const cafes = [
     {
         name: 'An Bialann',
-        urlTag: 'an-bialann',
-        long: -9.060548,
-        lat : 53.278765
+        urlTag: 'an-bialann'
     },
     {
         name: 'Smokeys',
-        urlTag: 'smokeys',
-        long : -9.060245,
-        lat: 53.269906
+        urlTag: 'smokeys'
     },
     {
         name: 'Sult',
-        urlTag: 'sult',
-        long : -9.058331,
-        lat : 53.278188
+        urlTag: 'sult'
     },
     {
         name: 'Friars',
-        urlTag: 'friars',
-        long : -9.066198,
-        lat : 53.284446
+        urlTag: 'friars'
     },
     {
         name: 'Zinc',
-        urlTag: 'zinc',
-        long : -9.063305,
-        lat : 53.283872
+        urlTag: 'zinc'
     },
     {
         name: 'Cloud Cafe',
-        urlTag: 'cloud-cafe',
-        long : -9.058582,
-        lat : 53.280332
+        urlTag: 'cloud-cafe'
     },
     {
         name: 'The Wall',
-        urlTag: 'the-wall',
-        long : -9.062401,
-        lat : 53.282282
+        urlTag: 'the-wall'
     },
     {
         name: 'Caife na Gaeilge',
-        urlTag: 'caife-na-gaeilge',
-        long : -9.060548,
-        lat : 53.278765
+        urlTag: 'caife-na-gaeilge'
     }
 ];
 

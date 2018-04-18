@@ -87,15 +87,6 @@
 .rating > input:checked ~ label:hover ~ label {color: #F2944A}
 
 
-/* Map */
-#map{
-    width: 400px;
-    height: 400px;
-    background-color: grey;
-    margin-bottom: 25px;
-}
-
-
 
 
 

@@ -10,24 +10,28 @@ describe('uni-bites about tests', () => {
         fbIcon = element(by.id('facebookIcon'));
         tweetIcon = element(by.id('twitterIcon'));
         instaIcon = element(by.id('instagramIcon'));
+        
+        fbURL = 'https://www.facebook.com/Uni-Bites-2463469143877653/?ref=page_internal';
+        twitterURL = 'https://twitter.com/BitesUni';
+        instagramURL = 'https://www.instagram.com/bitesuni/';
     });
 
     it('should link to facebook page', () => {
         fbIcon.click();
-        browser.wait(until.urlContains(`https://www.facebook.com/Uni-Bites-2463469143877653/?ref=page_internal`), 5000);
-        //expect(browser.getCurrentUrl()).toBe('https://www.facebook.com/Uni-Bites-2463469143877653/?ref=page_internal');
+        browser.wait(until.urlContains('facebook'), 5000);
+        expect(browser.getCurrentUrl()).toBe(fbURL);
     });
 
     it('should link to twitter page', () => {
         tweetIcon.click();
-        browser.wait(until.urlContains(`https://twitter.com/BitesUni`), 5000);
-        //expect(browser.getCurrentUrl()).toBe('https://twitter.com/BitesUni');
+        browser.wait(until.urlContains('twitter'), 5000);
+        expect(browser.getCurrentUrl()).toBe(twitterURL);
     });
     
     it('should link to instragram page', () => {
         instaIcon.click();
-        browser.wait(until.urlContains(`https://www.instagram.com/bitesuni/`), 5000);
-        //expect(browser.getCurrentUrl()).toBe('https://www.instagram.com/bitesuni/');
+        browser.wait(until.urlContains('instagram'), 5000);
+        expect(browser.getCurrentUrl()).toBe(instagramURL);
     });
     
     afterEach(() => {

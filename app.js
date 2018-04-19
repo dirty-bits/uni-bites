@@ -21,6 +21,7 @@ const cafe = require('./routes/cafe');
 const privacyPolicy = require('./routes/privacy-policy');
 const aboutUs = require('./routes/about-us');
 const careers = require('./routes/careers');
+const search = require('./routes/search');
 
 //Model Classes
 const Cafe = require('./models/cafe');
@@ -65,6 +66,7 @@ app.use('/cafe', cafe);
 app.use('/privacy-policy', privacyPolicy);
 app.use('/about-us', aboutUs);
 app.use('/careers', careers);
+app.use('/search', search);
 
 //catch 404 and forward to error handler
 app.use((req, res, next) => {

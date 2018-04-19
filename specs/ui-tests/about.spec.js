@@ -16,7 +16,7 @@ describe('uni-bites about tests', () => {
 
     it('should pass if the three paragraphs are there', () => {
         expect(paragraph1.getText()).toContain('Uni-Bites is a web-app that compares');
-        expect(paragraph2.getText()).toContain('Our team of financial consultants');
+        expect(paragraph2.getText()).toContain('Our team of modern college students');
     });
 
     afterEach(() => {

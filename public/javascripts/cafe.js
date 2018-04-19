@@ -41,7 +41,6 @@ function getStarsHtml(rating){
 function getComments() {
     $.get('/api/getComments', (data) => {
         let posts = '<div class="col-sm-12"><p class="title">Reviews</p></div>';
-        let recentReviews = '<div class="col-lg-6"><h1 class="headline alignText">Most Recent Reviews</h1></div>';
 
         for(let i = 0; i < data.length; i++) {
             if(typeof(data[i].rating) == "undefined") {
@@ -56,18 +55,8 @@ function getComments() {
                 </div>`;
         }
 
-        for(let i = 0; i < 4; i++) {
-            recentReviews +=
-                `<div class="col-lg-3 col-xs-7 col-lg-offset-0 col-xs-offset-2 toRight">
-                    <h1 class="subHeaderLower">${data[i].user_name}</h1>
-                    <p class="captionLower">${data[i].comment}</p>
-                </div>`;
-        }
-
         $('#cafereviews').html(posts);
         $('#count').html(data.length);
-
-        $('#recentReviews').html(recentReviews);
 
         if(!showPosts) {
             $('#feedPosts').hide();

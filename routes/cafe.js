@@ -16,6 +16,7 @@ router.get('/:cafename', (req, res, next) => {
         }
     }
 
+
     const viewModel = {
         hbsHelpers: hbsHelpers(req),
         cafe: currentCafe,

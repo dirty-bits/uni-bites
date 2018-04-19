@@ -15,7 +15,6 @@ const cafeSchema = new mongoose.Schema({
         type: ObjectId,
         ref: "unibites-comments"
     }]
-    
 });
 
 cafeSchema.methods.avgRating = function (average){

@@ -2,10 +2,11 @@ const express = require('express');
 
 const router = express.Router();
 const Comment = require('../models/comment');
+const hbsHelpers = require('./lib');
 
 /*GET home page. */
 router.get('/', (req, res, next) => {
-    res.render('index', { title: 'uni-bites' });
+    res.render('index', { title: 'uni-bites', hbsHelpers: hbsHelpers(req) });
 });
 
 /*GET login page.

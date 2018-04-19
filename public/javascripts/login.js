@@ -1,3 +1,8 @@
+$.urlParam = function(name){
+	var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+	return decodeURIComponent(results[1]) || 0;
+}
+
 $(document).ready(() => {
     /**
     * Event handler for when the user attempts to login
@@ -18,14 +23,20 @@ $(document).ready(() => {
 
         $.ajax({
             type: 'POST',
-            url: '/login',
+            url: '/api/login',
             dataType: 'json',
             data: {
                 email,
                 password
             },
             success(token) {
-                $(location).attr('href', '/feed');
+                var returnUrl = $.urlParam("returnUrl");
+                if(returnUrl.length > 0) {
+                    $(location).attr('href', returnUrl);
+                }
+                else {
+                    $(location).attr('href', '/');
+                }
             },
             error(errMsg) {
                 swal('Oops...',

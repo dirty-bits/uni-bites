@@ -4,15 +4,15 @@ const User = require('../models/user.js');
 const users = [
     {
         email: "admin",
-        password: User.generateHash("admin")
+        password_hash: User.generateHash("admin")
     },
     {
         email: "cafe",
-        password: User.generateHash("cafe")
+        password_hash: User.generateHash("cafe")
     },
     {
         email: "test",
-        password: User.generateHash("test")
+        password_hash: User.generateHash("test")
     }
 ]
 

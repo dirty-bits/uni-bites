@@ -43,7 +43,7 @@ $(document).ready(() => {
 
         $.ajax({
             type: 'POST',
-            url: '/register',
+            url: '/api/register',
             dataType: 'json',
             data: {
                 full_name,

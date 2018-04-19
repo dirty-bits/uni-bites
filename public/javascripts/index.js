@@ -1,9 +1,4 @@
 $(document).ready(() => {
-    $('#postForm').keyup((event) => {
-        const inputText = event.target.value;
-        $('#charRemaining').html(totalCharacters - inputText.length);
-    });
-
     getComments();
 });
 

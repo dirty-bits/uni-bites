@@ -101,7 +101,7 @@ router.post('/register', (req, res, next) => {
             //set the user's local credentials
             newUser.email = email;
             newUser.full_name = full_name;
-            newUser.password_hash = newUser.generateHash(password);
+            newUser.password_hash = User.generateHash(password);
             newUser.access_token = createJwt({ email });
             newUser.save((err, user) => {
                 if(err) {

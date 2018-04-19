@@ -9,6 +9,21 @@
         <link rel="shortcut icon" href="/images/favicon.png">
         <meta name="google-signin-scope" content="profile email">
         <meta name="google-signin-client_id" content="188255152888-kompatv2pfo0uai3c0opl5fc7r0drg1i.apps.googleusercontent.com">
+
+        <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+        <script>
+          // Initialize Firebase
+          var config = {
+            apiKey: "AIzaSyB-kTHWyad1JzFi9cjfHEiQGODS1itVcZc",
+            authDomain: "uni-bites-1518895842154.firebaseapp.com",
+            databaseURL: "https://uni-bites-1518895842154.firebaseio.com",
+            projectId: "uni-bites-1518895842154",
+            storageBucket: "",
+            messagingSenderId: "188255152888"
+          };
+          firebase.initializeApp(config);
+        </script>
+
         <script src="https://apis.google.com/js/platform.js" async defer></script>
 
         <title>{{title}}</title>

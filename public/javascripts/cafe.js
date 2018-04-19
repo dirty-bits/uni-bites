@@ -42,7 +42,7 @@ function getComments() {
     $.get('/api/getComments', (data) => {
         let posts = '<div class="col-sm-12"><p class="title">Reviews</p></div>';
 
-        for(let i = 0; i < data.length; i++) {
+        for(let i = 0; i < 3; i++) {
             if(typeof(data[i].rating) == "undefined") {
                 data[i].rating = 1;
             }

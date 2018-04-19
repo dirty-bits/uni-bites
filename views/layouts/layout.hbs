@@ -78,7 +78,11 @@
                             </ul>
                         </li>
                         <li class="specialButton">
-                            <a href="/login">Login/Register</a>
+                            {{#if hbsHelpers.unAuthorised }}
+                            <a href="/login{{hbsHelpers.returnUrl}}">Login/Register</a>
+                            {{else}}
+                            <a href="/users/logout">Logout</a>
+                            {{/if}}
                         </li>
                     </ul>
                 </div><!--/.nav-collapse -->

@@ -2,17 +2,25 @@ const express = require('express');
 
 const router = express.Router();
 const User = require('../models/cafe');
+const hbsHelpers = require('./lib');
 
 /*GET cafe page. */
 router.get('/:cafename', (req, res, next) => {
     console.log(req.params.cafename);
+    const cafes = req.app.locals.cafes;
+    let currentCafe = null;
+    for(let i = 0; i < cafes.length; i++) {
+        if(cafes[i].urlTag == req.params.cafename) {
+            currentCafe = cafes[i];
+            break;
+        }
+    }
 
 
     const viewModel = {
-        cafeTag: req.params.cafeTag,
-        cafeName: req.params.cafename,
-        cafe: null,
-        title: null,
+        hbsHelpers: hbsHelpers(req),
+        cafe: currentCafe,
+        title: `${currentCafe.name} | Uni-Bites`,
         lunch_menu: [
             {
                 name: "Scone",
@@ -57,22 +65,9 @@ router.get('/:cafename', (req, res, next) => {
                 price: 100.00
             }
         ]
-    }
+    };
 
-
-    const cafes = req.app.locals.cafes;
-
-    console.log(JSON.stringify(req.app.locals));
-
-    for(let i = 0; i < cafes.length; i++) {
-        if(cafes[i].urlTag == viewModel.cafeTag) {
-            viewModel.title = `${cafe[i].name} | Uni-Bites`;
-            break;
-        }
-    }
-
-    res.render('cafe', viewModel);
-
+    res.render('cafe',  viewModel);
 });
 
 module.exports = router;

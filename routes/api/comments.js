@@ -1,7 +1,7 @@
 const express = require('express');
 
 const router = express.Router();
-const Comment = require('../models/comment');
+const Comment = require('../../models/comment'); // TODO: look for better syntax
 
 router.post('/addComment', (req, res, next) => {
     comment = new Comment(req.body);
@@ -31,8 +31,9 @@ router.get('/getComments', (req, res, next) => {
     }).sort('-date_created');
 });
 
-router.get('/getComment', (req, res, next) => {
-    Comment.find((err, items) => {
+router.get('/getComment/:id', (req, res, next) => {
+    const id = req.params.id;
+    Comment.find({ _id: id},(err, items) => {
         if(err) {
             console.log('error: %s', JSON.stringify(err));
 

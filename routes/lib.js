@@ -18,9 +18,16 @@ function helpers(request) {
         auth = profile != null;
     }
 
+    var url = "?returnUrl="+encodeURIComponent(req.originalUrl); // url wont 
+    // work here because the multi level on the routing
+
     return helpers = {
         authorised: auth,
         notAuthorised: !auth,
+
+        returnUrl: url,
+        getReturnUrl: function(){return "IMPLEMENT ME!"},
+
         isAuthorised() {
             console.log('helpers.isAuthorised called');
             return auth;

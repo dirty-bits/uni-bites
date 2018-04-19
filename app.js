@@ -11,12 +11,15 @@ const bodyParser = require('body-parser');
 
 //Routes
 const cafeAPI = require('./routes/api');
+const commentsAPI = require('./routes/api/comments');
+const authenticationAPI = require('./routes/api/authentication');
+
 const index = require('./routes/index');
 const users = require('./routes/users');
 const login = require('./routes/login');
+
 const feed = require('./routes/feed');
 const register = require('./routes/register');
-const commentsAPI = require('./routes/comments');
 const cafe = require('./routes/cafe');
 const privacyPolicy = require('./routes/privacy-policy');
 const aboutUs = require('./routes/about-us');
@@ -56,8 +59,10 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/api', cafeAPI);
+app.use('/api', commentsAPI);       //TODO: Move this to its own api/Section, check mongodb api
+app.use('/api', authenticationAPI);
+
 app.use('/', index);
-app.use('/', commentsAPI); //TODO: Move this to its own api/Section, check mongodb api
 app.use('/users', users);
 app.use('/login', login);
 app.use('/feed', feed);
@@ -90,6 +95,11 @@ app.use((err, req, res, next) => {
 Cafe.find({}, (err, res) => {
     console.log('Cached %d cafe\'s in the app.locals', res.length);
     app.locals.cafes = res;
+});
+
+// handlebars helpers
+hbs.registerHelper("json", function(object){
+    return JSON.stringify(object);
 });
 
 module.exports = app;

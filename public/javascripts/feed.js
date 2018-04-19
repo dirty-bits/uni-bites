@@ -13,7 +13,7 @@ $(document).ready(() => {
 $('#postForm').submit((event) => {
     event.preventDefault();
 
-    $.post('/addComment', { comment: event.target.inputPost.value }, (result) => {
+    $.post('/api/addComment', { comment: event.target.inputPost.value }, (result) => {
         $('#charRemaining').html(totalCharacters);
         event.target.reset();
         getComments();
@@ -26,8 +26,9 @@ $('#postForm').submit((event) => {
 $('#feedPosts').click((event) => {
     console.log(event.target.name);
     if(event.target.name) {
+        debugger;
         $.ajax({
-            url: `/removeComment/${event.target.name}`,
+            url: `/api/removeComment/${event.target.name}`,
             type: 'DELETE',
             success(result) {
                 getComments();
@@ -37,13 +38,13 @@ $('#feedPosts').click((event) => {
 });
 
 function getComments() {
-    $.get('/getComments', (data) => {
+    $.get('/api/getComments', (data) => {
         let posts = '';
         for(let i = 0; i < data.length; i++) {
             posts += `<div class='row well text-left'><div class='col-xs-9'>${data[i].comment}</div><div class='col-xs-3'>` + `<button type='button' name='${data[i]._id}' class='btn btn-danger'>` + 'Delete</button></div></div></div>';
         }
 
-        $('#feedPosts').html(posts);
+        $('#cafereviews').html(posts);
         $('#count').html(data.length);
 
         if(!showPosts) {
@@ -56,16 +57,7 @@ function getComments() {
     });
 }
 
-$('#btn-count').click((event) => {
-    const options = {
-        easing: 'swing',
-        duration: 500
-    };
-    if(!showPosts) {
-        $('#feedPosts').slideToggle(options);
-        showPosts = true;
-    } else{
-        $('#feedPosts').slideToggle(options);
-        showPosts = false;
-    }
+$(function() {
+    rating = $(".rating").val();
+    console.log(rating);
 });

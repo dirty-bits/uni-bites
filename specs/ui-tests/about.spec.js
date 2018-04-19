@@ -8,7 +8,6 @@ describe('uni-bites about tests', () => {
     
         paragraph1 = element(by.id('Paragraph1'));
         paragraph2 = element(by.id('Paragraph2'));
-        paragraph3 = element(by.id('Paragraph3'));
     });
 
     it('should have the correct title', () => {
@@ -18,7 +17,6 @@ describe('uni-bites about tests', () => {
     it('should pass if the three paragraphs are there', () => {
         expect(paragraph1.getText()).toContain('Uni-Bites is a web-app that compares');
         expect(paragraph2.getText()).toContain('Our team of financial consultants');
-        expect(paragraph3.getText()).toContain('We know you will love using Uni-Bites too');
     });
 
     afterEach(() => {

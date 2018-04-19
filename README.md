@@ -71,10 +71,10 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 ## Authors
 
 * **Daniel McFadden** - *SCRUM Master* - [GitHub](https://github.com/dmcfaddengalway)
-* **Marinella Gallo** - *Design Leader* - [GitHub](https://github.com/elliebobellie)
-* **Alan Flaherty** - *Backend & Testing Leader* [GitHub](https://github.com/aflaherty13)
-* **Aoife Downey** - *Database Leader* [GitHub](https://github.com/aoifeDowney)
-* **Joan Rohan** - *Resource Leader* [GitHub](https://github.com/jrohan1)
+* **Marinella Gallo** - [GitHub](https://github.com/elliebobellie)
+* **Alan Flaherty** - [GitHub](https://github.com/aflaherty13)
+* **Aoife Downey** - [GitHub](https://github.com/aoifeDowney)
+* **Joan Rohan** - [GitHub](https://github.com/jrohan1)
 
 ## License
 

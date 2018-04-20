@@ -1,15 +1,33 @@
-var mongoose = require('mongoose');
-var bcrypt = require('bcrypt-nodejs');
-var Schema = mongoose.Schema;
+const mongoose = require('mongoose');
+const bcrypt = require('bcrypt-nodejs');
+const Comment = require('./comment');
+
+const Schema = mongoose.Schema;
+const ObjectId = Schema.Types.ObjectId;
 
 require('./util');
 
-var cafeSchema = new mongoose.Schema({
-  name: String,
-  location: String
+const cafeSchema = new mongoose.Schema({
+    name: { type: String },
+    location: { type: String },
+    urlTag: { type: String },
+    comments:[{
+        type: ObjectId,
+        ref: "unibites-comments"
+    }]
 });
 
-module.exports = {
-    model = mongoose.model('unibites-users', cafeSchema)
-    schema: cafeSchema;
-}
+cafeSchema.methods.avgRating = function (average){
+    return Comment.aggregate([
+    {
+        $group: {
+            _id: '$cafe',
+            ratingAvg: {$avg: '$rating'}
+        }
+    }
+]);
+   
+};
+
+
+module.exports = mongoose.model('unibites-cafes', cafeSchema);

@@ -1,45 +1,52 @@
-var jwt = require('jsonwebtoken');
+const jwt = require('jsonwebtoken');
 
 function helpers(request) {
-    var req = request;
-    console.log("helpers.authorised called");
+    const req = request;
+    console.log('helpers.authorised called');
 
-    var auth = false;
+    let auth = false;
     if(req.cookies.Authorization) {
-        var jwtString = req.cookies.Authorization.split(" ");
+        const jwtString = req.cookies.Authorization.split(' ');
 
-        var profile = null;
-        try {
+        let profile = null;
+        try{
             profile = verifyJwt(jwtString[1]);
-        }
-        catch(ex) {
-            console.log("Helpers: Caught exception: %s", ex);
+        } catch(ex) {
+            console.log('Helpers: Caught exception: %s', ex);
         }
 
         auth = profile != null;
     }
 
+    var url = "?returnUrl="+encodeURIComponent(req.originalUrl); // url wont 
+    // work here because the multi level on the routing
+
     return helpers = {
-        authorised: auth, 
-        notAuthorised: !auth, 
-        isAuthorised: function() {
-            console.log ( "helpers.isAuthorised called" );
+        authorised: auth,
+        notAuthorised: !auth,
+
+        returnUrl: url,
+        getReturnUrl: function(){return "IMPLEMENT ME!"},
+
+        isAuthorised() {
+            console.log('helpers.isAuthorised called');
             return auth;
         },
-        unAuthorised: function() {
-            console.log ( "helpers.unAuthorised called" );
-            return !auth;
+        unAuthorised() {
+            console.log('helpers.unAuthorised called');
+            return!auth;
         },
-        username: function() {
-            console.log( "helpers.username called" );
-            // TODO: save username in cookie on login
-            return "Not Implemented";
+        username() {
+            console.log('helpers.username called');
+
+            //TODO: save username in cookie on login
+            return'Not Implemented';
         }
-    }
+    };
 }
 
 function verifyJwt(jwtString) {
-    var value = jwt.verify(jwtString, 'CSIsTheWorst');
+    const value = jwt.verify(jwtString, 'CSIsTheWorst');
     return value;
 }
 
